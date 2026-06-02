@@ -157,15 +157,19 @@
         const config = window.SITE_CONFIG;
         if (!config || !config.logo) return;
 
+        const logoLabel = config.company && config.company.name
+            ? config.company.name
+            : config.logo.label;
+
         const fullLogoTargets = doc.querySelectorAll('[data-site-logo]');
         const iconTargets = doc.querySelectorAll('[data-logo-icon]');
         const textTargets = doc.querySelectorAll('[data-logo-text]');
 
         fullLogoTargets.forEach((target) => {
             target.innerHTML = `
-                <span class="site-logo__icon" aria-hidden="true">${config.logo.svg}</span>
-                <span class="site-logo__text">${config.logo.label}</span>
-            `;
+            <span class="site-logo__icon" aria-hidden="true">${config.logo.svg}</span>
+            <span class="site-logo__text">${logoLabel}</span>
+        `;
         });
 
         iconTargets.forEach((target) => {
@@ -173,7 +177,7 @@
         });
 
         textTargets.forEach((target) => {
-            target.textContent = config.logo.label;
+            target.textContent = logoLabel;
         });
     }
 
@@ -334,6 +338,7 @@
         renderLogo();
         renderServiceLinks();
         renderLegalLinks();
+        applyConfigAutoReplacements();
     }
 
     function initLucideIcons() {
@@ -886,6 +891,139 @@
                 autoplayDelay: Number(carousel.dataset.autoplayDelay || 5500)
             });
         });
+    }
+
+    function escapeRegExp(value) {
+        return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function replaceStringByConfig(value) {
+        const config = window.SITE_CONFIG;
+
+        if (!config || value === undefined || value === null) return value;
+
+        const replaceConfig = config.replace || {};
+
+        const rules = [
+            {
+                from: replaceConfig.companyNames || ['SOLAK'],
+                to: config.company && config.company.name
+            },
+            {
+                from: replaceConfig.emails || ['hello@solaksolar.com'],
+                to: config.contact && config.contact.email
+            },
+            {
+                from: replaceConfig.phoneDisplays || ['(888) 555-0148'],
+                to: config.contact && config.contact.phoneDisplay
+            },
+            {
+                from: replaceConfig.phoneRaws || ['+18885550148', '18885550148'],
+                to: config.contact && config.contact.phoneRaw
+            },
+            {
+                from: replaceConfig.addresses || ['1846 Solar Ridge Avenue, Austin, TX 78701, USA'],
+                to: config.company && config.company.address
+            }
+        ];
+
+        let nextValue = String(value);
+
+        rules.forEach((rule) => {
+            if (!rule.to || !Array.isArray(rule.from)) return;
+
+            rule.from.forEach((oldValue) => {
+                if (!oldValue || oldValue === rule.to) return;
+
+                nextValue = nextValue.replace(
+                    new RegExp(escapeRegExp(oldValue), 'g'),
+                    rule.to
+                );
+            });
+        });
+
+        return nextValue;
+    }
+
+    function applyConfigAutoReplacements() {
+        const config = window.SITE_CONFIG;
+        if (!config) return;
+
+        const skipTags = new Set([
+            'SCRIPT',
+            'STYLE',
+            'NOSCRIPT',
+            'TEMPLATE',
+            'SVG'
+        ]);
+
+        const walker = doc.createTreeWalker(
+            doc.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode(node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || skipTags.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            node.nodeValue = replaceStringByConfig(node.nodeValue);
+        });
+
+        const attributesToReplace = [
+            'title',
+            'aria-label',
+            'alt',
+            'placeholder',
+            'content',
+            'value'
+        ];
+
+        attributesToReplace.forEach((attr) => {
+            doc.querySelectorAll(`[${attr}]`).forEach((node) => {
+                const currentValue = node.getAttribute(attr);
+                const nextValue = replaceStringByConfig(currentValue);
+
+                if (nextValue !== currentValue) {
+                    node.setAttribute(attr, nextValue);
+                }
+            });
+        });
+
+        if (doc.title) {
+            doc.title = replaceStringByConfig(doc.title);
+        }
+
+        if (config.contact && config.contact.phoneRaw) {
+            const normalizedPhone = normalizeTel(config.contact.phoneRaw);
+
+            doc.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+                link.setAttribute('href', `tel:${normalizedPhone}`);
+            });
+        }
+
+        if (config.contact && config.contact.email) {
+            doc.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+                link.setAttribute('href', `mailto:${config.contact.email}`);
+            });
+        }
     }
 
     function initServiceCardNavigationFix() {

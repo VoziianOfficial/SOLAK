@@ -17,6 +17,14 @@ window.SITE_CONFIG = {
         supportHours: 'Mon–Fri, 8:00 AM–7:00 PM'
     },
 
+    replace: {
+        companyNames: ['SOLAK'],
+        emails: ['hello@solaksolar.com'],
+        phoneDisplays: ['(888) 555-0148'],
+        phoneRaws: ['+18885550148', '18885550148'],
+        addresses: ['1846 Solar Ridge Avenue, Austin, TX 78701, USA']
+    },
+
     cta: {
         primary: 'Compare Solar Providers',
         secondary: 'Explore Services',

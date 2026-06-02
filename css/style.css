@@ -2595,3 +2595,15 @@ html {
 .services-grid__card[href] {
     pointer-events: auto;
 }
+
+@media (max-width: 1023px) {
+
+    .mobile-menu .site-logo,
+    .mobile-menu .site-logo__text {
+        color: var(--color-white) !important;
+    }
+
+    .mobile-menu .site-logo:hover .site-logo__text {
+        color: var(--color-yellow) !important;
+    }
+}

@@ -2570,3 +2570,28 @@ html {
         height: 46px;
     }
 }
+/* =========================================================
+   SERVICE CARD NAVIGATION FIX
+========================================================= */
+
+.home-services__card[href],
+.services-page-swiper__card[href],
+.related-services__card[href],
+.services-grid__card[href] {
+    cursor: pointer;
+    touch-action: pan-y;
+}
+
+.home-services__card[href] *,
+.services-page-swiper__card[href] *,
+.related-services__card[href] *,
+.services-grid__card[href] * {
+    pointer-events: none;
+}
+
+.home-services__card[href],
+.services-page-swiper__card[href],
+.related-services__card[href],
+.services-grid__card[href] {
+    pointer-events: auto;
+}

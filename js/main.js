@@ -893,6 +893,120 @@
         });
     }
 
+    function initServiceCardNavigationFix() {
+        const cardSelector = [
+            '.home-services__card[href]',
+            '.services-page-swiper__card[href]',
+            '.related-services__card[href]',
+            '.services-grid__card[href]'
+        ].join(', ');
+
+        let activeCard = null;
+        let startX = 0;
+        let startY = 0;
+        let hasMoved = false;
+
+        function isServiceCard(target) {
+            return target.closest(cardSelector);
+        }
+
+        function isInsideCarouselControl(target) {
+            return Boolean(
+                target.closest('button') ||
+                target.closest('.swiper-button') ||
+                target.closest('.swiper-pagination') ||
+                target.closest('[data-carousel-prev]') ||
+                target.closest('[data-carousel-next]')
+            );
+        }
+
+        function resetPointerState() {
+            activeCard = null;
+            startX = 0;
+            startY = 0;
+            hasMoved = false;
+        }
+
+        doc.addEventListener('pointerdown', (event) => {
+            if (isInsideCarouselControl(event.target)) {
+                resetPointerState();
+                return;
+            }
+
+            const card = isServiceCard(event.target);
+
+            if (!card) {
+                resetPointerState();
+                return;
+            }
+
+            activeCard = card;
+            startX = event.clientX;
+            startY = event.clientY;
+            hasMoved = false;
+        }, true);
+
+        doc.addEventListener('pointermove', (event) => {
+            if (!activeCard) return;
+
+            const diffX = Math.abs(event.clientX - startX);
+            const diffY = Math.abs(event.clientY - startY);
+
+            if (diffX > 12 || diffY > 12) {
+                hasMoved = true;
+            }
+        }, true);
+
+        doc.addEventListener('pointerup', (event) => {
+            if (!activeCard) return;
+
+            const href = activeCard.getAttribute('href');
+
+            if (!href || href === '#') {
+                resetPointerState();
+                return;
+            }
+
+            if (hasMoved) {
+                resetPointerState();
+                return;
+            }
+
+            if (
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey ||
+                event.button === 1
+            ) {
+                resetPointerState();
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            window.location.assign(href);
+
+            resetPointerState();
+        }, true);
+
+        doc.addEventListener('pointercancel', resetPointerState, true);
+
+        doc.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter') return;
+
+            const card = isServiceCard(event.target);
+            if (!card) return;
+
+            const href = card.getAttribute('href');
+            if (!href || href === '#') return;
+
+            event.preventDefault();
+            window.location.assign(href);
+        }, true);
+    }
+
     function initGlobal() {
         applySiteConfig();
         initLucideIcons();
@@ -902,6 +1016,7 @@
         initFaqAccordions();
         initCookieBanner();
         initGlobalCarousels();
+        initServiceCardNavigationFix();
         initLucideIcons();
     }
 

@@ -50,14 +50,14 @@
     }
 
     function connectRelatedCarouselControls() {
-        const sections = doc.querySelectorAll('.related-services');
+        const sections = doc.querySelectorAll('[data-related-services]');
 
         sections.forEach((section) => {
-            const carousel = section.querySelector('.related-services__carousel');
+            const carousel = section.querySelector('.home-services__carousel');
             if (!carousel) return;
 
-            const externalPrev = section.querySelector('[data-related-carousel-prev]');
-            const externalNext = section.querySelector('[data-related-carousel-next]');
+            const externalPrev = section.querySelector('[data-carousel-prev]');
+            const externalNext = section.querySelector('[data-carousel-next]');
 
             let internalPrev = carousel.querySelector('[data-carousel-prev]');
             let internalNext = carousel.querySelector('[data-carousel-next]');
@@ -97,7 +97,7 @@
     }
 
     function applyRelatedCardImages() {
-        const cards = doc.querySelectorAll('.related-services__card');
+        const cards = doc.querySelectorAll('[data-related-services] .home-services__card');
 
         cards.forEach((card) => {
             const href = card.getAttribute('href');
@@ -107,7 +107,7 @@
 
             card.style.setProperty(
                 '--card-image',
-                `linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url("../${image}")`
+                `linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url("${image}")`
             );
         });
     }
@@ -194,7 +194,7 @@
     function setCurrentServiceInRelated() {
         const currentPage = window.location.pathname.split('/').pop();
 
-        const relatedLinks = doc.querySelectorAll('.related-services__card');
+        const relatedLinks = doc.querySelectorAll('[data-related-services] .home-services__card');
 
         relatedLinks.forEach((link) => {
             const href = link.getAttribute('href');

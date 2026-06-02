@@ -40,25 +40,45 @@
     ];
 
     function connectServicesCarouselControls() {
-        const section = doc.querySelector('.services-page-swiper');
+        const section = doc.querySelector('[data-services-page-swiper]');
         if (!section) return;
 
-        const carousel = section.querySelector('.services-page-swiper__carousel');
+        const carousel = section.querySelector('.home-services__carousel');
         if (!carousel) return;
 
-        const externalPrev = section.querySelector('[data-services-carousel-prev]');
-        const externalNext = section.querySelector('[data-services-carousel-next]');
+        const externalPrev = section.querySelector('[data-carousel-prev]');
+        const externalNext = section.querySelector('[data-carousel-next]');
 
-        const internalPrev = carousel.querySelector('[data-carousel-prev]');
-        const internalNext = carousel.querySelector('[data-carousel-next]');
+        let internalPrev = carousel.querySelector('[data-carousel-prev]');
+        let internalNext = carousel.querySelector('[data-carousel-next]');
 
-        if (externalPrev && internalPrev) {
+        if (!internalPrev) {
+            internalPrev = doc.createElement('button');
+            internalPrev.type = 'button';
+            internalPrev.hidden = true;
+            internalPrev.setAttribute('data-carousel-prev', '');
+            internalPrev.setAttribute('aria-label', 'Previous service slide');
+            carousel.appendChild(internalPrev);
+        }
+
+        if (!internalNext) {
+            internalNext = doc.createElement('button');
+            internalNext.type = 'button';
+            internalNext.hidden = true;
+            internalNext.setAttribute('data-carousel-next', '');
+            internalNext.setAttribute('aria-label', 'Next service slide');
+            carousel.appendChild(internalNext);
+        }
+
+        if (externalPrev && internalPrev && externalPrev.dataset.bound !== 'true') {
+            externalPrev.dataset.bound = 'true';
             externalPrev.addEventListener('click', () => {
                 internalPrev.click();
             });
         }
 
-        if (externalNext && internalNext) {
+        if (externalNext && internalNext && externalNext.dataset.bound !== 'true') {
+            externalNext.dataset.bound = 'true';
             externalNext.addEventListener('click', () => {
                 internalNext.click();
             });
@@ -66,7 +86,7 @@
     }
 
     function enhanceServiceCards() {
-        const cards = doc.querySelectorAll('.services-grid__card, .services-page-swiper__card');
+        const cards = doc.querySelectorAll('.services-grid__card, [data-services-page-swiper] .home-services__card');
 
         cards.forEach((card) => {
             card.addEventListener('mouseenter', () => {
@@ -131,6 +151,12 @@
             window.lucide.createIcons();
         }
     }
+
+    /*
+       Runs before DOMContentLoaded carousel setup if possible.
+       This ensures hidden internal buttons exist before main.js initializes carousels.
+    */
+    connectServicesCarouselControls();
 
     if (doc.readyState === 'loading') {
         doc.addEventListener('DOMContentLoaded', initServicesPage);

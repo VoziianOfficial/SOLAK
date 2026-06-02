@@ -223,7 +223,7 @@
                 </div>
             </section>
 
-            <!-- SERVICES GRID -->
+            <!-- SERVICES GRID
             <section class="services-grid-section section section--light" aria-labelledby="services-grid-title">
                 <div class="container">
                     <div class="section-heading section-heading--center">
@@ -327,89 +327,91 @@
                         </article>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- SERVICES SWIPER -->
-            <section class="services-page-swiper section section--dark" aria-labelledby="services-swiper-title">
+            <section class="home-services section section--dark" data-services-page-swiper
+                aria-labelledby="services-swiper-title">
+                <span class="home-services__top-line" aria-hidden="true"></span>
+
                 <div class="container">
                     <div class="section-heading section-heading--split">
                         <div>
-                            <p class="section-kicker section-kicker--sun">Browse by service</p>
-                            <h2 id="services-swiper-title">Solar Categories in One Smooth View</h2>
+                            <p class="section-kicker section-kicker--sun">Solar service categories</p>
+                            <h2 id="services-swiper-title">Explore Solar Service Categories</h2>
                             <p>
-                                Swipe through common solar comparison categories and choose the service page that
-                                matches your project interest.
+                                Browse common solar project categories and compare independent provider options
+                                before choosing who to contact.
                             </p>
                         </div>
 
                         <div class="section-heading__actions">
                             <div class="swiper-controls" aria-label="Services carousel controls">
                                 <button class="swiper-button" type="button" aria-label="Previous service"
-                                    data-services-carousel-prev>
+                                    data-carousel-prev>
                                     <i data-lucide="arrow-left" aria-hidden="true"></i>
                                 </button>
 
                                 <button class="swiper-button" type="button" aria-label="Next service"
-                                    data-services-carousel-next>
+                                    data-carousel-next>
                                     <i data-lucide="arrow-right" aria-hidden="true"></i>
                                 </button>
                             </div>
+
+                            <a class="btn btn--light btn--small" href="services.html">
+                                View All Services
+                            </a>
                         </div>
                     </div>
 
-                    <div class="swiper-shell services-page-swiper__carousel" data-carousel="global"
-                        data-autoplay="true">
-                        <button hidden type="button" data-carousel-prev aria-label="Previous service slide"></button>
-                        <button hidden type="button" data-carousel-next aria-label="Next service slide"></button>
-
+                    <div class="swiper-shell home-services__carousel" data-carousel="global" data-autoplay="true">
                         <div class="service-swiper">
                             <div class="swiper-track" data-carousel-track>
                                 <article class="swiper-slide" data-carousel-slide>
-                                    <a class="photo-card services-page-swiper__card"
-                                        href="solar-panel-installation.html"
-                                        style="--card-image: linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url('assets/images/solar-panels-roof.jpg');">
+                                    <a class="photo-card home-services__card" href="solar-panel-installation.html"
+                                        aria-label="Solar Panel Installation">
                                         <span class="photo-card__icon">
                                             <i data-lucide="panel-top" aria-hidden="true"></i>
                                         </span>
                                         <div class="photo-card__content">
                                             <h3>Solar Panel Installation</h3>
-                                            <p>Compare providers for new solar panel options.</p>
+                                            <p>Find providers for solar panel installation.</p>
                                             <span class="card-link">View options</span>
                                         </div>
                                     </a>
                                 </article>
 
                                 <article class="swiper-slide" data-carousel-slide>
-                                    <a class="photo-card services-page-swiper__card" href="residential-solar.html"
-                                        style="--card-image: linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url('assets/images/residential-solar.jpg');">
+                                    <a class="photo-card home-services__card" href="residential-solar.html"
+                                        aria-label="Residential Solar">
                                         <span class="photo-card__icon">
                                             <i data-lucide="house" aria-hidden="true"></i>
                                         </span>
                                         <div class="photo-card__content">
                                             <h3>Residential Solar</h3>
-                                            <p>Explore home solar provider comparison paths.</p>
+                                            <p>Explore provider options for home solar systems.</p>
                                             <span class="card-link">View options</span>
                                         </div>
                                     </a>
                                 </article>
 
                                 <article class="swiper-slide" data-carousel-slide>
-                                    <a class="photo-card services-page-swiper__card" href="commercial-solar.html"
-                                        style="--card-image: linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url('assets/images/commercial-solar.jpg');">
+                                    <a class="photo-card home-services__card" href="commercial-solar.html"
+                                        aria-label="Commercial Solar">
                                         <span class="photo-card__icon">
                                             <i data-lucide="building-2" aria-hidden="true"></i>
                                         </span>
                                         <div class="photo-card__content">
                                             <h3>Commercial Solar</h3>
-                                            <p>Review options for business and categories.</p>
+                                            <p>Review solar provider categories for business.</p>
                                             <span class="card-link">View options</span>
                                         </div>
                                     </a>
                                 </article>
 
                                 <article class="swiper-slide" data-carousel-slide>
-                                    <a class="photo-card services-page-swiper__card" href="solar-battery-storage.html"
-                                        style="--card-image: linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url('assets/images/solar-battery.jpg');">
+                                    <a class="photo-card home-services__card" href="solar-battery-storage.html"
+                                        aria-label="Solar Battery Storage">
                                         <span class="photo-card__icon">
                                             <i data-lucide="battery-charging" aria-hidden="true"></i>
                                         </span>
@@ -422,28 +424,28 @@
                                 </article>
 
                                 <article class="swiper-slide" data-carousel-slide>
-                                    <a class="photo-card services-page-swiper__card" href="solar-maintenance.html"
-                                        style="--card-image: linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url('assets/images/solar-maintenance.jpg');">
+                                    <a class="photo-card home-services__card" href="solar-maintenance.html"
+                                        aria-label="Solar Maintenance">
                                         <span class="photo-card__icon">
                                             <i data-lucide="wrench" aria-hidden="true"></i>
                                         </span>
                                         <div class="photo-card__content">
                                             <h3>Solar Maintenance</h3>
-                                            <p>Find provider categories for maintenance.</p>
+                                            <p>Compare maintenance options for your system.</p>
                                             <span class="card-link">View options</span>
                                         </div>
                                     </a>
                                 </article>
 
                                 <article class="swiper-slide" data-carousel-slide>
-                                    <a class="photo-card services-page-swiper__card" href="solar-consultation.html"
-                                        style="--card-image: linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url('assets/images/solar-consultation.jpg');">
+                                    <a class="photo-card home-services__card" href="solar-consultation.html"
+                                        aria-label="Solar Consultation">
                                         <span class="photo-card__icon">
                                             <i data-lucide="messages-square" aria-hidden="true"></i>
                                         </span>
                                         <div class="photo-card__content">
                                             <h3>Solar Consultation</h3>
-                                            <p>Compare solar direction, quote paths.</p>
+                                            <p>Ask for quote guidance.</p>
                                             <span class="card-link">View options</span>
                                         </div>
                                     </a>

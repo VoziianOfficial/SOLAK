@@ -2459,3 +2459,89 @@ html {
 .home-services .home-services__card[href="solar-consultation.html"] {
     --card-image: url("../assets/images/solar-consultation.jpg");
 }
+
+
+/* =========================================================
+   MOBILE/TABLET CAROUSEL ACTIONS FIX
+   Better layout for small CTA button + swiper arrows
+========================================================= */
+
+@media (max-width: 1023px) {
+
+    .home-services .section-heading__actions,
+    .related-services .section-heading__actions,
+    .services-page-swiper .section-heading__actions {
+        display: grid;
+        grid-template-columns: auto minmax(180px, max-content);
+        align-items: center;
+        justify-content: start;
+        gap: 12px;
+        width: 100%;
+        margin-top: 4px;
+    }
+
+    .home-services .section-heading__actions .swiper-controls,
+    .related-services .section-heading__actions .swiper-controls,
+    .services-page-swiper .section-heading__actions .swiper-controls {
+        margin-top: 0;
+        justify-content: start;
+    }
+
+    .home-services .section-heading__actions .btn--small,
+    .related-services .section-heading__actions .btn--small,
+    .services-page-swiper .section-heading__actions .btn--small {
+        min-height: 46px;
+        padding: 12px 18px;
+        color: var(--color-navy-deep);
+        background: var(--color-white);
+        border-color: rgba(255, 255, 255, 0.78);
+        box-shadow: 0 14px 32px rgba(3, 42, 90, 0.18);
+        white-space: normal;
+    }
+
+    .home-services .section-heading__actions .btn--small:hover,
+    .related-services .section-heading__actions .btn--small:hover,
+    .services-page-swiper .section-heading__actions .btn--small:hover {
+        color: var(--color-navy-deep);
+        background: var(--color-yellow);
+        border-color: var(--color-yellow);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .home-services .section-heading__actions,
+    .related-services .section-heading__actions,
+    .services-page-swiper .section-heading__actions {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 2px;
+    }
+
+    .home-services .section-heading__actions .btn--small,
+    .related-services .section-heading__actions .btn--small,
+    .services-page-swiper .section-heading__actions .btn--small {
+        order: 1;
+        width: 100%;
+        min-height: 48px;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .home-services .section-heading__actions .swiper-controls,
+    .related-services .section-heading__actions .swiper-controls,
+    .services-page-swiper .section-heading__actions .swiper-controls {
+        order: 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
+
+    .home-services .section-heading__actions .swiper-button,
+    .related-services .section-heading__actions .swiper-button,
+    .services-page-swiper .section-heading__actions .swiper-button {
+        width: 100%;
+        height: 46px;
+    }
+}

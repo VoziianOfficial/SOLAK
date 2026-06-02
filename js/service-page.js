@@ -103,12 +103,14 @@
             const href = card.getAttribute('href');
             const image = SERVICE_IMAGE_MAP[href];
 
-            if (!image || card.style.getPropertyValue('--card-image')) return;
+            if (!image) return;
 
-            card.style.setProperty(
-                '--card-image',
-                `linear-gradient(180deg, rgba(3, 42, 90, 0.08), rgba(3, 42, 90, 0.9)), url("${image}")`
-            );
+            card.style.setProperty('--card-image', `url("../${image}")`);
+            card.style.backgroundImage =
+                `linear-gradient(180deg, rgba(3, 42, 90, 0.04) 0%, rgba(3, 42, 90, 0.14) 42%, rgba(3, 42, 90, 0.72) 100%), url("${image}")`;
+            card.style.backgroundSize = 'cover';
+            card.style.backgroundPosition = 'center';
+            card.style.backgroundRepeat = 'no-repeat';
         });
     }
 
@@ -263,6 +265,8 @@
        This ensures hidden internal buttons exist before main.js initializes carousels.
     */
     connectRelatedCarouselControls();
+
+    applyRelatedCardImages();
 
     if (doc.readyState === 'loading') {
         doc.addEventListener('DOMContentLoaded', initServicePage);

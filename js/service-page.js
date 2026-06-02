@@ -249,7 +249,7 @@
         applyRelatedCardImages();
         addServiceFaqSchema();
         addServicePageJsonLd();
-        addRevealEffects();
+        // addRevealEffects();
         addFocusHelpers();
         setCurrentServiceInRelated();
 

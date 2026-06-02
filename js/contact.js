@@ -308,7 +308,7 @@
         addContactFaqSchema();
         addContactOptionFocusStates();
         addMapPanelPointerEffect();
-        addContactRevealEffects();
+        // addContactRevealEffects();
 
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons();

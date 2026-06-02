@@ -2257,3 +2257,42 @@ strong {
         transition-duration: 0.001ms !important;
     }
 }
+
+/* =========================================================
+   DISABLE DELAYED REVEAL ANIMATIONS
+   Text and blocks must be visible immediately
+========================================================= */
+
+.is-ready,
+.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-delay: 0ms !important;
+}
+
+.legal-sidebar__card.is-ready,
+.legal-content.is-ready,
+.legal-block.is-ready,
+.legal-contact-box__item.is-ready,
+.service-overview__content.is-ready,
+.service-overview__panel.is-ready,
+.service-compare-line.is-ready,
+.service-factor.is-ready,
+.service-photo-split__content.is-ready,
+.service-photo-split__photo.is-ready,
+.service-faq .faq-item.is-ready,
+.contact-option.is-ready,
+.contact-form-card.is-ready,
+.service-area-panel__content.is-ready,
+.map-card.is-ready,
+.contact-faq .faq-item.is-ready,
+.provider-factor.is-ready,
+.services-process__step.is-ready,
+.about-story__content.is-ready,
+.about-story__visual.is-ready,
+.about-why__item.is-ready,
+.aggregator-model__step.is-ready,
+.about-value.is-ready {
+    opacity: 1 !important;
+    transform: none !important;
+}

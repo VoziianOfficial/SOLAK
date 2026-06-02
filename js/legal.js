@@ -199,7 +199,7 @@
 
     function initLegalPage() {
         setActiveLegalPageLink();
-        addLegalRevealEffects();
+        // addLegalRevealEffects();
         addSmoothLegalAnchors();
         addCopySupportForLegalContacts();
         addLegalPageJsonLd();

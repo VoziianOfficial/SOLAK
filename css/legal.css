@@ -481,3 +481,47 @@
         padding: 16px;
     }
 }
+
+.legal-sidebar__card.is-ready,
+.legal-content.is-ready,
+.legal-block.is-ready,
+.legal-contact-box__item.is-ready {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 520ms ease,
+        transform 520ms ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.legal-sidebar__card.is-visible,
+.legal-content.is-visible,
+.legal-block.is-visible,
+.legal-contact-box__item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.legal-contact-box__item {
+    cursor: pointer;
+    transition:
+        background var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.legal-contact-box__item:hover,
+.legal-contact-box__item:focus-visible {
+    background:
+        linear-gradient(90deg, rgba(22, 184, 62, 0.06), rgba(255, 210, 63, 0.08));
+    border-color: rgba(22, 184, 62, 0.3);
+    outline: none;
+}
+
+.legal-contact-box__item.is-copied {
+    background: rgba(22, 184, 62, 0.1);
+}
+
+.legal-contact-box__item.is-copy-error {
+    background: rgba(228, 73, 46, 0.08);
+}

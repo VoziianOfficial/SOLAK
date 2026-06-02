@@ -177,7 +177,7 @@
 
     function initAboutPage() {
         improveAboutMarquee();
-        addRevealEffects();
+        // addRevealEffects();
         addFocusHelpers();
         addAboutJsonLd();
         addSmallParallax();

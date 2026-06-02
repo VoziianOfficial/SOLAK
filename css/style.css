@@ -2435,3 +2435,27 @@ html {
     transform: translateY(-3px) rotate(-4deg);
     filter: drop-shadow(0 8px 14px rgba(255, 210, 63, 0.24));
 }
+
+.home-services .home-services__card[href="solar-panel-installation.html"] {
+    --card-image: url("../assets/images/solar-panels-roof.jpg");
+}
+
+.home-services .home-services__card[href="residential-solar.html"] {
+    --card-image: url("../assets/images/residential-solar.jpg");
+}
+
+.home-services .home-services__card[href="commercial-solar.html"] {
+    --card-image: url("../assets/images/commercial-solar.jpg");
+}
+
+.home-services .home-services__card[href="solar-battery-storage.html"] {
+    --card-image: url("../assets/images/solar-battery.jpg");
+}
+
+.home-services .home-services__card[href="solar-maintenance.html"] {
+    --card-image: url("../assets/images/solar-maintenance.jpg");
+}
+
+.home-services .home-services__card[href="solar-consultation.html"] {
+    --card-image: url("../assets/images/solar-consultation.jpg");
+}

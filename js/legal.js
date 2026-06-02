@@ -1,14 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK LEGAL JS
-   Legal pages:
-   - active legal sidebar state
-   - reveal effects
-   - smooth anchor behavior
-   - copy contact values
-   - legal page JSON-LD
-========================================================= */
 
 (function () {
     const doc = document;
@@ -199,7 +190,6 @@
 
     function initLegalPage() {
         setActiveLegalPageLink();
-        // addLegalRevealEffects();
         addSmoothLegalAnchors();
         addCopySupportForLegalContacts();
         addLegalPageJsonLd();

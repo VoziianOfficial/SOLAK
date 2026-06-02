@@ -1,14 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK SERVICE PAGE JS
-   Shared script for all 6 service detail pages:
-   - related services carousel controls
-   - service FAQ JSON-LD
-   - reveal effects
-   - card image fallback
-   - accessibility helpers
-========================================================= */
 
 (function () {
     const doc = document;
@@ -251,7 +242,6 @@
         applyRelatedCardImages();
         addServiceFaqSchema();
         addServicePageJsonLd();
-        // addRevealEffects();
         addFocusHelpers();
         setCurrentServiceInRelated();
 
@@ -260,11 +250,7 @@
         }
     }
 
-    /*
-       Runs before DOMContentLoaded carousel setup if possible.
-       This ensures hidden internal buttons exist before main.js initializes carousels.
-    */
-    connectRelatedCarouselControls();
+        connectRelatedCarouselControls();
 
     applyRelatedCardImages();
 

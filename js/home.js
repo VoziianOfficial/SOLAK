@@ -1,10 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK HOME JS
-   Home page enhancements: service card images, external
-   carousel controls, marquee duplication and small effects.
-========================================================= */
 
 (function () {
     const doc = document;
@@ -186,7 +181,6 @@
             try {
                 list.releasePointerCapture(event.pointerId);
             } catch (error) {
-                // Pointer may already be released by the browser.
             }
         });
 
@@ -207,13 +201,7 @@
         }
     }
 
-    /*
-       Important:
-       This runs immediately because home.js is loaded after the HTML.
-       It prepares hidden internal carousel buttons before main.js initializes
-       its global carousel on DOMContentLoaded.
-    */
-    prepareExternalCarouselControls();
+        prepareExternalCarouselControls();
 
     if (doc.readyState === 'loading') {
         doc.addEventListener('DOMContentLoaded', initHomePage);

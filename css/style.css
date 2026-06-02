@@ -5,65 +5,50 @@
 @import url("./service-page.css");
 @import url("./legal.css");
 
-/* =========================================================
-   SOLAK GLOBAL STYLES
-   Main file: variables, reset, header, footer, buttons,
-   mobile menu, dropdown, cookie banner, shared components.
-========================================================= */
 
 :root {
-    /* MAIN DARK BLUE — header, hero, footer, dark sections */
-    --color-navy-deep: #032A5A;
+        --color-navy-deep: #032A5A;
     --color-navy: #063B7A;
     --color-navy-soft: #0B4A8F;
     --color-navy-card: #09366B;
 
-    /* BLUE VOLUME — gradients, overlays, background lines */
-    --color-blue-glow: #1D78C8;
+        --color-blue-glow: #1D78C8;
     --color-blue-light: #DCEEFF;
     --color-blue-soft: #EEF7FF;
 
-    /* SOLAR GREEN — main accent */
-    --color-green: #16B83E;
+        --color-green: #16B83E;
     --color-green-hover: #0EA532;
     --color-green-deep: #087A28;
     --color-green-soft: #E8F8EC;
 
-    /* SECOND ACCENT YELLOW — use only in small amount */
-    --color-yellow: #FFD23F;
+        --color-yellow: #FFD23F;
     --color-yellow-hover: #FFC400;
     --color-yellow-soft: #FFF6D6;
     --color-yellow-deep: #D99A00;
 
-    /* LIGHT SECTIONS */
-    --color-white: #FFFFFF;
+        --color-white: #FFFFFF;
     --color-light: #F7FAFD;
     --color-light-soft: #EEF4F8;
     --color-border: #DCE6EF;
 
-    /* TEXT */
-    --color-text: #102033;
+        --color-text: #102033;
     --color-text-muted: #66758A;
     --color-text-light: #FFFFFF;
 
-    /* SHADOWS */
-    --shadow-soft: 0 18px 45px rgba(3, 42, 90, 0.12);
+        --shadow-soft: 0 18px 45px rgba(3, 42, 90, 0.12);
     --shadow-card: 0 20px 55px rgba(3, 42, 90, 0.16);
     --shadow-green: 0 14px 34px rgba(22, 184, 62, 0.28);
     --shadow-yellow: 0 12px 28px rgba(255, 210, 63, 0.28);
 
-    /* Radius */
-    --radius-sm: 0;
+        --radius-sm: 0;
     --radius-md: 0;
     --radius-lg: 0;
     --radius-round: 999px;
 
-    /* Layout */
-    --container: 1180px;
+        --container: 1180px;
     --section-padding: 82px;
 
-    /* Extra system */
-    --header-top-height: 30px;
+        --header-top-height: 30px;
     --header-main-height: 76px;
     --transition-fast: 180ms ease;
     --transition-base: 260ms ease;
@@ -71,9 +56,6 @@
     --focus-ring: 0 0 0 4px rgba(22, 184, 62, 0.22);
 }
 
-/* =========================================================
-   RESET
-========================================================= */
 
 *,
 *::before,
@@ -158,9 +140,6 @@ strong {
     background: var(--color-green);
 }
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
 
 .skip-link {
     position: fixed;
@@ -198,9 +177,6 @@ strong {
     border: 0;
 }
 
-/* =========================================================
-   GLOBAL LAYOUT
-========================================================= */
 
 .page {
     min-height: 100vh;
@@ -340,9 +316,6 @@ strong {
     color: rgba(255, 255, 255, 0.78);
 }
 
-/* =========================================================
-   DECORATIONS
-========================================================= */
 
 .solar-line {
     position: relative;
@@ -402,9 +375,6 @@ strong {
     bottom: 40px;
 }
 
-/* =========================================================
-   BUTTONS
-========================================================= */
 
 .btn {
     position: relative;
@@ -559,9 +529,6 @@ strong {
     transform: translateX(115%);
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
 
 .site-header {
     position: sticky;
@@ -846,9 +813,6 @@ strong {
     transform: rotate(-45deg);
 }
 
-/* =========================================================
-   DESKTOP SERVICES DROPDOWN
-========================================================= */
 
 .services-dropdown {
     position: absolute;
@@ -954,9 +918,6 @@ strong {
     background: linear-gradient(90deg, rgba(255, 210, 63, 0.22), rgba(22, 184, 62, 0.08));
 }
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
 
 .mobile-menu {
     position: fixed;
@@ -1143,9 +1104,6 @@ strong {
     color: var(--color-green);
 }
 
-/* =========================================================
-   HERO GLOBAL
-========================================================= */
 
 .hero,
 .page-hero,
@@ -1238,9 +1196,6 @@ strong {
     justify-content: center;
 }
 
-/* =========================================================
-   SHARED CARDS / PHOTO CARDS
-========================================================= */
 
 .photo-card {
     position: relative;
@@ -1369,9 +1324,6 @@ strong {
     transform: translateX(4px);
 }
 
-/* =========================================================
-   CAROUSEL / SWIPER SHARED BASE
-========================================================= */
 
 .swiper-shell {
     position: relative;
@@ -1469,9 +1421,6 @@ strong {
     background: rgba(3, 42, 90, 0.22);
 }
 
-/* =========================================================
-   FAQ LINES
-========================================================= */
 
 .faq-lines {
     border-top: 1px solid var(--color-border);
@@ -1568,9 +1517,6 @@ strong {
     color: rgba(255, 255, 255, 0.76);
 }
 
-/* =========================================================
-   FORMS BASE
-========================================================= */
 
 .form-grid {
     display: grid;
@@ -1713,9 +1659,6 @@ strong {
     border-color: #FF6B3D;
 }
 
-/* =========================================================
-   PRE FOOTER CTA
-========================================================= */
 
 .prefooter-cta {
     position: relative;
@@ -1767,9 +1710,6 @@ strong {
     gap: 12px;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
 
 .site-footer {
     color: var(--color-white);
@@ -1906,9 +1846,6 @@ strong {
     border-top: 1px solid rgba(255, 255, 255, 0.13);
 }
 
-/* =========================================================
-   COOKIE BANNER
-========================================================= */
 
 .cookie-banner {
     position: fixed;
@@ -1972,17 +1909,11 @@ strong {
     gap: 10px;
 }
 
-/* =========================================================
-   ICON BASE
-========================================================= */
 
 [data-lucide] {
     stroke-width: 1.9;
 }
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
 @media (max-width: 1180px) {
     :root {
@@ -2239,9 +2170,6 @@ strong {
     }
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -2258,10 +2186,6 @@ strong {
     }
 }
 
-/* =========================================================
-   DISABLE DELAYED REVEAL ANIMATIONS
-   Text and blocks must be visible immediately
-========================================================= */
 
 .is-ready,
 .is-visible {
@@ -2297,9 +2221,6 @@ strong {
     transform: none !important;
 }
 
-/* =========================================================
-   FIXED STICKY HEADER — FINAL OVERRIDE
-========================================================= */
 
 :root {
     --fixed-header-height: calc(var(--header-top-height) + var(--header-main-height));
@@ -2358,10 +2279,6 @@ html {
     }
 }
 
-/* =========================================================
-   HOME SERVICES CARD IMAGE VISIBILITY FIX
-   Only for home services swiper
-========================================================= */
 
 .home-services .home-services__card.photo-card {
     display: block;
@@ -2422,10 +2339,6 @@ html {
     color: rgba(255, 255, 255, 0.88);
 }
 
-/* =========================================================
-   HOME SERVICES ICON POSITION ONLY
-   Keep original icon style, only move top-right
-========================================================= */
 
 .home-services .home-services__card.photo-card {
     position: relative;
@@ -2486,10 +2399,6 @@ html {
 }
 
 
-/* =========================================================
-   MOBILE/TABLET CAROUSEL ACTIONS FIX
-   Better layout for small CTA button + swiper arrows
-========================================================= */
 
 @media (max-width: 1023px) {
 
@@ -2570,9 +2479,6 @@ html {
         height: 46px;
     }
 }
-/* =========================================================
-   SERVICE CARD NAVIGATION FIX
-========================================================= */
 
 .home-services__card[href],
 .services-page-swiper__card[href],

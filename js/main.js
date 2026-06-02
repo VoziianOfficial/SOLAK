@@ -1,10 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK MAIN JS
-   Global config injection, header interactions, mobile menu,
-   dropdown delay, FAQ lines, cookie banner, reusable carousel.
-========================================================= */
 
 (function () {
     const doc = document;

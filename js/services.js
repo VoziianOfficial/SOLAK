@@ -1,12 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK SERVICES JS
-   Services page enhancements:
-   - external carousel buttons
-   - FAQ JSON-LD
-   - small accessibility helpers
-========================================================= */
 
 (function () {
     const doc = document;
@@ -145,18 +138,13 @@
         connectServicesCarouselControls();
         enhanceServiceCards();
         addServicesFaqSchema();
-        // addLineRevealClass();
 
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons();
         }
     }
 
-    /*
-       Runs before DOMContentLoaded carousel setup if possible.
-       This ensures hidden internal buttons exist before main.js initializes carousels.
-    */
-    connectServicesCarouselControls();
+        connectServicesCarouselControls();
 
     if (doc.readyState === 'loading') {
         doc.addEventListener('DOMContentLoaded', initServicesPage);

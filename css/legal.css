@@ -1,11 +1,4 @@
-/* =========================================================
-   LEGAL PAGES — SOLAK
-   Privacy Policy, Cookie Policy, Terms of Service
-========================================================= */
 
-/* =========================
-   LEGAL HERO
-========================= */
 
 .legal-hero {
     --hero-image:
@@ -21,9 +14,6 @@
     padding-block: 58px;
 }
 
-/* =========================
-   LEGAL CONTENT
-========================= */
 
 .legal-section {
     padding-block: 64px;
@@ -165,9 +155,6 @@
     box-shadow: 0 0 0 6px rgba(255, 210, 63, 0.14);
 }
 
-/* =========================
-   LEGAL TEXT
-========================= */
 
 .legal-block {
     padding-block: 24px;
@@ -247,9 +234,6 @@
     color: var(--color-navy-deep);
 }
 
-/* =========================
-   LEGAL NOTICE BOX
-========================= */
 
 .legal-notice {
     margin-top: 22px;
@@ -276,9 +260,6 @@
     line-height: 1.55;
 }
 
-/* =========================
-   LEGAL TABLE
-========================= */
 
 .legal-table-wrap {
     margin-top: 18px;
@@ -317,9 +298,6 @@
     border-bottom: 0;
 }
 
-/* =========================
-   LEGAL CONTACT BOX
-========================= */
 
 .legal-contact-box {
     display: grid;
@@ -385,9 +363,6 @@
     color: var(--color-green);
 }
 
-/* =========================
-   LEGAL RESPONSIVE
-========================= */
 
 @media (max-width: 1023px) {
     .legal-section {

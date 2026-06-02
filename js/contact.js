@@ -1,14 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK CONTACT JS
-   Contact page:
-   - frontend-only form validation
-   - accessible success/error messages
-   - no empty layout gaps
-   - FAQ JSON-LD
-   - compact interaction helpers
-========================================================= */
 
 (function () {
     const doc = document;
@@ -308,7 +299,6 @@
         addContactFaqSchema();
         addContactOptionFocusStates();
         addMapPanelPointerEffect();
-        // addContactRevealEffects();
 
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons();

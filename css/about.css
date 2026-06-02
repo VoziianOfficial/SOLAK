@@ -1,10 +1,4 @@
-/* =========================================================
-   ABOUT PAGE — SOLAK
-========================================================= */
 
-/* =========================
-   ABOUT HERO
-========================= */
 
 .about-hero {
     --hero-image:
@@ -15,9 +9,6 @@
         url("../assets/images/solar-panels-roof.jpg");
 }
 
-/* =========================
-   COMPANY STORY
-========================= */
 
 .about-story {
     padding-block: 68px;
@@ -150,9 +141,6 @@
     line-height: 1.45;
 }
 
-/* =========================
-   ABOUT MARQUEE
-========================= */
 
 .about-marquee {
     position: relative;
@@ -260,9 +248,6 @@
     }
 }
 
-/* =========================
-   WHY COMPARE — ABOUT
-========================= */
 
 .about-why {
     padding-block: 64px;
@@ -411,9 +396,6 @@
     filter: drop-shadow(0 9px 16px rgba(22, 184, 62, 0.18));
 }
 
-/* =========================
-   AGGREGATOR MODEL
-========================= */
 
 .aggregator-model {
     padding-block: 64px;
@@ -512,9 +494,6 @@
     filter: drop-shadow(0 10px 18px rgba(22, 184, 62, 0.24));
 }
 
-/* =========================
-   VALUES / TRUST
-========================= */
 
 .about-values {
     padding-block: 64px;
@@ -615,9 +594,6 @@
     filter: drop-shadow(0 10px 18px rgba(22, 184, 62, 0.2));
 }
 
-/* =========================
-   ABOUT RESPONSIVE
-========================= */
 
 @media (max-width: 1180px) {
 
@@ -824,10 +800,6 @@
     }
 }
 
-/* =========================================================
-   ABOUT VALUES MOBILE ICON FIX
-   Icon on the right without overlapping text
-========================================================= */
 
 @media (max-width: 767px) {
     .about-values .about-value {

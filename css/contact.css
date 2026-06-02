@@ -1,10 +1,4 @@
-/* =========================================================
-   CONTACT PAGE — SOLAK
-========================================================= */
 
-/* =========================
-   CONTACT HERO
-========================= */
 
 .contact-hero {
     --hero-image:
@@ -15,9 +9,6 @@
         url("../assets/images/solar-consultation.jpg");
 }
 
-/* =========================
-   CONTACT OPTIONS STRIP
-========================= */
 
 .contact-options {
     padding-block: 42px;
@@ -151,9 +142,6 @@
     color: var(--color-green);
 }
 
-/* =========================
-   CONTACT FORM SECTION
-========================= */
 
 .contact-form-section {
     padding-block: 66px;
@@ -279,9 +267,6 @@
     box-shadow: 0 0 0 4px rgba(228, 73, 46, 0.16);
 }
 
-/* =========================
-   ADDRESS / SERVICE AREA PANEL
-========================= */
 
 .service-area-panel {
     padding-block: 66px;
@@ -523,9 +508,6 @@
     line-height: 1.48;
 }
 
-/* =========================
-   CONTACT FAQ
-========================= */
 
 .contact-faq {
     padding-block: 64px;
@@ -568,9 +550,6 @@
     line-height: 1.5;
 }
 
-/* =========================
-   CONTACT RESPONSIVE
-========================= */
 
 @media (max-width: 1180px) {
     .contact-options__grid {
@@ -712,10 +691,6 @@
     }
 }
 
-/* =========================================================
-   CONTACT FORM COMPACT FIX
-   Remove empty space and reduce form height
-========================================================= */
 
 .contact-form-card {
     padding: 26px !important;
@@ -787,9 +762,6 @@
     }
 }
 
-/* =========================
-   CONTACT AFTER REQUEST
-========================= */
 
 .contact-after-request {
     padding-block: 54px;
@@ -929,9 +901,6 @@
     filter: drop-shadow(0 10px 18px rgba(22, 184, 62, 0.2));
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 1023px) {
     .contact-after-request {
@@ -1021,10 +990,6 @@
         height: 29px;
     }
 }
-/* =========================================================
-   CONTACT PAGE COMPACT SECTION PADDINGS
-   Form / After request / FAQ
-========================================================= */
 
 .contact-form-section,
 .contact-after-request,
@@ -1050,9 +1015,6 @@
     }
 }
 
-/* =========================================================
-   CONTACT AFTER REQUEST DARK VERSION
-========================================================= */
 
 .contact-after-request {
     color: var(--color-white);

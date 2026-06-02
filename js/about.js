@@ -1,13 +1,5 @@
 'use strict';
 
-/* =========================================================
-   SOLAK ABOUT JS
-   About page enhancements:
-   - marquee accessibility
-   - reveal effects
-   - values/focus helpers
-   - organization JSON-LD
-========================================================= */
 
 (function () {
     const doc = document;
@@ -177,7 +169,6 @@
 
     function initAboutPage() {
         improveAboutMarquee();
-        // addRevealEffects();
         addFocusHelpers();
         addAboutJsonLd();
         addSmallParallax();

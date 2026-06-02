@@ -318,83 +318,63 @@
                                 </p>
                             </div>
 
-                            <form class="contact-form" novalidate data-contact-form>
-                                <div class="form-grid">
-                                    <div class="form-field">
-                                        <label class="form-label" for="full-name">Full name</label>
-                                        <input class="form-input" id="full-name" name="fullName" type="text"
-                                            autocomplete="name" placeholder="Your full name" required>
-                                    </div>
-
-                                    <div class="form-field">
-                                        <label class="form-label" for="email">Email</label>
-                                        <input class="form-input" id="email" name="email" type="email"
-                                            autocomplete="email" placeholder="you@example.com" required>
-                                    </div>
-
-                                    <div class="form-field">
-                                        <label class="form-label" for="phone">Phone</label>
-                                        <input class="form-input" id="phone" name="phone" type="tel" autocomplete="tel"
-                                            placeholder="(888) 555-0148" required>
-                                    </div>
-
-                                    <div class="form-field">
-                                        <label class="form-label" for="zip-code">ZIP code</label>
-                                        <input class="form-input" id="zip-code" name="zipCode" type="text"
-                                            inputmode="numeric" autocomplete="postal-code" placeholder="ZIP code"
-                                            required>
-                                    </div>
-
-                                    <div class="form-field form-field--full">
-                                        <label class="form-label" for="solar-interest">Solar interest</label>
-                                        <select class="form-select" id="solar-interest" name="solarInterest" required
-                                            data-service-options data-placeholder="Select solar interest">
-                                            <option value="">Select solar interest</option>
-                                            <option value="Solar Panel Installation">Solar Panel Installation</option>
-                                            <option value="Residential Solar">Residential Solar</option>
-                                            <option value="Commercial Solar">Commercial Solar</option>
-                                            <option value="Solar Battery Storage">Solar Battery Storage</option>
-                                            <option value="Solar Maintenance">Solar Maintenance</option>
-                                            <option value="Solar Consultation">Solar Consultation</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-field form-field--full">
-                                        <label class="form-label" for="message">Message</label>
-                                        <textarea class="form-textarea" id="message" name="message"
-                                            placeholder="Tell us what kind of solar provider options you want to compare."
-                                            required></textarea>
-                                    </div>
-
-                                    <div class="form-field form-field--full">
-                                        <label class="custom-checkbox">
-                                            <input type="checkbox" name="consent" required>
-                                            <span class="custom-checkbox__box" aria-hidden="true"></span>
-                                            <span class="custom-checkbox__text">
-                                                I agree to be contacted about solar provider options. I understand SOLAK
-                                                is an independent comparison platform and not a direct solar contractor.
-                                            </span>
-                                        </label>
-                                    </div>
+                        <form class="contact-form contact-form--compact" novalidate data-contact-form>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label" for="full-name">Full name</label>
+                                    <input class="form-input" id="full-name" name="fullName" type="text" autocomplete="name"
+                                        placeholder="Your full name" required>
                                 </div>
-
-                                <div class="contact-form__actions">
-                                    <button class="btn btn--primary" type="submit">
-                                        <span data-config="cta.quote">Request Solar Quotes</span>
-                                    </button>
-
-                                    <p class="contact-form__small">
-                                        SOLAK does not guarantee provider availability, pricing, licensing, insurance,
-                                        or project results.
-                                    </p>
+                        
+                                <div class="form-field">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-input" id="email" name="email" type="email" autocomplete="email"
+                                        placeholder="you@example.com" required>
                                 </div>
-
-                                <div class="form-message form-message--success" role="status" aria-live="polite"
-                                    data-form-success></div>
-
-                                <div class="form-message form-message--error" role="alert" aria-live="assertive"
-                                    data-form-error></div>
-                            </form>
+                        
+                                <div class="form-field">
+                                    <label class="form-label" for="phone">Phone</label>
+                                    <input class="form-input" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(888) 555-0148"
+                                        required>
+                                </div>
+                        
+                                <div class="form-field">
+                                    <label class="form-label" for="zip-code">ZIP code</label>
+                                    <input class="form-input" id="zip-code" name="zipCode" type="text" inputmode="numeric"
+                                        autocomplete="postal-code" placeholder="ZIP code" required>
+                                </div>
+                        
+                                <div class="form-field form-field--full">
+                                    <label class="form-label" for="solar-interest">Solar interest</label>
+                                    <select class="form-select" id="solar-interest" name="solarInterest" required data-service-options
+                                        data-placeholder="Select solar interest">
+                                        <option value="">Select solar interest</option>
+                                        <option value="Solar Panel Installation">Solar Panel Installation</option>
+                                        <option value="Residential Solar">Residential Solar</option>
+                                        <option value="Commercial Solar">Commercial Solar</option>
+                                        <option value="Solar Battery Storage">Solar Battery Storage</option>
+                                        <option value="Solar Maintenance">Solar Maintenance</option>
+                                        <option value="Solar Consultation">Solar Consultation</option>
+                                    </select>
+                                </div>
+                        
+                                <div class="form-field form-field--full">
+                                    <label class="form-label" for="message">Message</label>
+                                    <textarea class="form-textarea" id="message" name="message"
+                                        placeholder="Tell us what kind of solar provider options you want to compare." required></textarea>
+                                </div>
+                            </div>
+                        
+                            <div class="contact-form__actions">
+                                <button class="btn btn--primary" type="submit">
+                                    <span data-config="cta.quote">Request Solar Quotes</span>
+                                </button>
+                            </div>
+                        
+                            <div class="form-message form-message--success" role="status" aria-live="polite" data-form-success></div>
+                        
+                            <div class="form-message form-message--error" role="alert" aria-live="assertive" data-form-error></div>
+                        </form>
                         </div>
                     </div>
                 </div>

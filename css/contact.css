@@ -711,3 +711,78 @@
         animation: none;
     }
 }
+
+/* =========================================================
+   CONTACT FORM COMPACT FIX
+   Remove empty space and reduce form height
+========================================================= */
+
+.contact-form-card {
+    padding: 26px !important;
+}
+
+.contact-form-card__head {
+    margin-bottom: 18px !important;
+}
+
+.contact-form-card__head h2 {
+    font-size: 1.45rem;
+    line-height: 1.15;
+}
+
+.contact-form-card__head p {
+    margin-top: 7px;
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
+.contact-form--compact .form-grid {
+    gap: 12px !important;
+}
+
+.contact-form--compact .form-field {
+    gap: 5px;
+}
+
+.contact-form--compact .form-label {
+    font-size: 0.82rem;
+}
+
+.contact-form--compact .form-input,
+.contact-form--compact .form-select {
+    min-height: 42px !important;
+    padding: 9px 12px !important;
+}
+
+.contact-form--compact .form-textarea {
+    min-height: 84px !important;
+    padding: 10px 12px !important;
+}
+
+.contact-form--compact .contact-form__actions {
+    margin-top: 14px !important;
+}
+
+.contact-form--compact .contact-form__actions .btn {
+    min-height: 44px;
+}
+
+.contact-form--compact .form-message:empty {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 767px) {
+    .contact-form-card {
+        padding: 20px !important;
+    }
+
+    .contact-form--compact .form-grid {
+        gap: 11px !important;
+    }
+
+    .contact-form--compact .form-textarea {
+        min-height: 78px !important;
+    }
+}

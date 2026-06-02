@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLAK | Compare Solar Provider Options</title>
+    <meta name="description"
+        content="SOLAK is an independent solar provider comparison platform helping homeowners and businesses explore solar categories, compare provider options, and request solar quotes.">
+
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="page">
+        <!-- HEADER -->
+        <header class="site-header" data-site-header>
+            <div class="site-header__top">
+                <div class="container site-header__top-inner">
+                    <p class="site-header__notice" data-config="company.serviceArea">
+                        Independent solar provider comparison across selected areas in the United States
+                    </p>
+
+                    <div class="site-header__meta" aria-label="SOLAK quick contact information">
+                        <a href="mailto:hello@solaksolar.com" data-config-mailto="contact.email">
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                            <span data-config="contact.email">hello@solaksolar.com</span>
+                        </a>
+
+                        <span>
+                            <i data-lucide="clock-3" aria-hidden="true"></i>
+                            <span data-config="contact.supportHours">Mon–Fri, 8:00 AM–7:00 PM</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-header__main">
+                <div class="container site-header__main-inner">
+                    <a class="site-logo" href="index.html" aria-label="SOLAK home" data-site-logo>
+                        <span class="site-logo__icon" aria-hidden="true"></span>
+                        <span class="site-logo__text">SOLAK</span>
+                    </a>
+
+                    <nav class="site-nav" aria-label="Main navigation">
+                        <ul class="site-nav__list">
+                            <li class="site-nav__item">
+                                <a class="site-nav__link" href="index.html">Home</a>
+                            </li>
+
+                            <li class="site-nav__item" data-services-menu>
+                                <a class="site-nav__button" href="services.html" aria-expanded="false"
+                                    data-services-nav-button>
+                                    Services
+                                    <i data-lucide="chevron-down" aria-hidden="true"></i>
+                                </a>
+
+                                <div class="services-dropdown" data-services-dropdown>
+                                    <div data-dropdown-services>
+                                        <a class="services-dropdown__link" href="solar-panel-installation.html">
+                                            Solar Panel Installation
+                                        </a>
+                                        <a class="services-dropdown__link" href="residential-solar.html">
+                                            Residential Solar
+                                        </a>
+                                        <a class="services-dropdown__link" href="commercial-solar.html">
+                                            Commercial Solar
+                                        </a>
+                                        <a class="services-dropdown__link" href="solar-battery-storage.html">
+                                            Solar Battery Storage
+                                        </a>
+                                        <a class="services-dropdown__link" href="solar-maintenance.html">
+                                            Solar Maintenance
+                                        </a>
+                                        <a class="services-dropdown__link" href="solar-consultation.html">
+                                            Solar Consultation
+                                        </a>
+                                        <a class="services-dropdown__link services-dropdown__all" href="services.html">
+                                            View All Services
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="site-nav__item">
+                                <a class="site-nav__link" href="about.html">About</a>
+                            </li>
+
+                            <li class="site-nav__item">
+                                <a class="site-nav__link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="site-header__actions">
+                        <a class="icon-btn" href="tel:+18885550148" aria-label="Call SOLAK"
+                            data-config-href="contact.phoneRaw">
+                            <i data-lucide="phone" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="icon-btn" href="mailto:hello@solaksolar.com" aria-label="Email SOLAK"
+                            data-config-mailto="contact.email">
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="btn btn--primary site-header__cta" href="contact.html#contact-form">
+                            <span data-config="cta.primary">Compare Solar Providers</span>
+                        </a>
+                    </div>
+
+                    <button class="mobile-menu-toggle" type="button" aria-label="Open mobile menu"
+                        aria-controls="mobile-menu" aria-expanded="false" data-mobile-menu-open>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+            <div class="mobile-menu__panel" data-mobile-menu-panel>
+                <div class="mobile-menu__head">
+                    <a class="site-logo" href="index.html" aria-label="SOLAK home" data-site-logo>
+                        <span class="site-logo__icon" aria-hidden="true"></span>
+                        <span class="site-logo__text">SOLAK</span>
+                    </a>
+
+                    <button class="mobile-menu__close" type="button" aria-label="Close mobile menu"
+                        data-mobile-menu-close>
+                        <i data-lucide="x" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="mobile-menu__content">
+                    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+                        <a class="mobile-menu__link" href="index.html">Home</a>
+                        <a class="mobile-menu__link" href="services.html">Services</a>
+                        <a class="mobile-menu__link" href="about.html">About</a>
+                        <a class="mobile-menu__link" href="contact.html">Contact</a>
+                    </nav>
+
+                    <div class="mobile-menu__group">
+                        <p class="mobile-menu__title">Solar service categories</p>
+
+                        <div class="mobile-menu__services" data-mobile-services>
+                            <a class="mobile-menu__service" href="solar-panel-installation.html">
+                                Solar Panel Installation
+                            </a>
+                            <a class="mobile-menu__service" href="residential-solar.html">
+                                Residential Solar
+                            </a>
+                            <a class="mobile-menu__service" href="commercial-solar.html">
+                                Commercial Solar
+                            </a>
+                            <a class="mobile-menu__service" href="solar-battery-storage.html">
+                                Solar Battery Storage
+                            </a>
+                            <a class="mobile-menu__service" href="solar-maintenance.html">
+                                Solar Maintenance
+                            </a>
+                            <a class="mobile-menu__service" href="solar-consultation.html">
+                                Solar Consultation
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu__contact">
+                        <a href="tel:+18885550148" data-config-href="contact.phoneRaw">
+                            <i data-lucide="phone" aria-hidden="true"></i>
+                            <span data-config="contact.phoneDisplay">(888) 555-0148</span>
+                        </a>
+
+                        <a href="mailto:hello@solaksolar.com" data-config-mailto="contact.email">
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                            <span data-config="contact.email">hello@solaksolar.com</span>
+                        </a>
+
+                        <span>
+                            <i data-lucide="clock-3" aria-hidden="true"></i>
+                            <span data-config="contact.supportHours">Mon–Fri, 8:00 AM–7:00 PM</span>
+                        </span>
+
+                        <a class="btn btn--primary" href="contact.html#contact-form">
+                            <span data-config="cta.quote">Request Solar Quotes</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="main" id="main">
+            <!-- HERO -->
+            <section class="hero home-hero" aria-labelledby="home-hero-title">
+                <div class="ray-bg" aria-hidden="true"></div>
+
+                <div class="container">
+                    <div class="hero__content home-hero__content">
+                        <p class="section-kicker section-kicker--sun">
+                            Independent Solar Provider Comparison
+                        </p>
+
+                        <h1 class="hero__title" id="home-hero-title">
+                            Compare Solar Provider Options With <span data-config="company.name">SOLAK</span>
+                        </h1>
+
+                        <p class="hero__text">
+                            Explore local solar company categories, compare quote paths, and connect with independent
+                            providers suited to your home or business project.
+                        </p>
+
+                        <div class="home-hero__actions">
+                            <a class="btn btn--primary" href="contact.html#contact-form">
+                                <span data-config="cta.primary">Compare Solar Providers</span>
+                            </a>
+
+                            <a class="btn btn--light" href="services.html">
+                                <span data-config="cta.secondary">Explore Services</span>
+                            </a>
+
+                            <a class="btn btn--light" href="tel:+18885550148" data-config-href="contact.phoneRaw">
+                                <i data-lucide="phone" aria-hidden="true"></i>
+                                <span data-config="cta.phone">Call Now</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-service-links" aria-label="Solar service category links">
+                            <a class="hero-service-link" href="solar-panel-installation.html">
+                                <span class="hero-service-link__icon">
+                                    <i data-lucide="panel-top" aria-hidden="true"></i>
+                                </span>
+                                <span>Solar Panel Installation</span>
+                            </a>
+
+                            <a class="hero-service-link" href="residential-solar.html">
+                                <span class="hero-service-link__icon">
+                                    <i data-lucide="house" aria-hidden="true"></i>
+                                </span>
+                                <span>Residential Solar</span>
+                            </a>
+
+                            <a class="hero-service-link" href="commercial-solar.html">
+                                <span class="hero-service-link__icon">
+                                    <i data-lucide="building-2" aria-hidden="true"></i>
+                                </span>
+                                <span>Commercial Solar</span>
+                            </a>
+
+                            <a class="hero-service-link" href="solar-battery-storage.html">
+                                <span class="hero-service-link__icon">
+                                    <i data-lucide="battery-charging" aria-hidden="true"></i>
+                                </span>
+                                <span>Battery Storage</span>
+                            </a>
+
+                            <a class="hero-service-link" href="solar-maintenance.html">
+                                <span class="hero-service-link__icon">
+                                    <i data-lucide="wrench" aria-hidden="true"></i>
+                                </span>
+                                <span>Maintenance</span>
+                            </a>
+
+                            <a class="hero-service-link" href="solar-consultation.html">
+                                <span class="hero-service-link__icon">
+                                    <i data-lucide="messages-square" aria-hidden="true"></i>
+                                </span>
+                                <span>Consultation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MARQUEE -->
+            <section class="home-marquee" aria-label="Solar service categories">
+                <div class="home-marquee__track">
+                    <div class="home-marquee__group">
+                        <a class="home-marquee__item" href="solar-panel-installation.html">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="panel-top" aria-hidden="true"></i>
+                            </span>
+                            Solar Panel Installation
+                        </a>
+
+                        <a class="home-marquee__item" href="residential-solar.html">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="house" aria-hidden="true"></i>
+                            </span>
+                            Residential Solar
+                        </a>
+
+                        <a class="home-marquee__item" href="commercial-solar.html">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="building-2" aria-hidden="true"></i>
+                            </span>
+                            Commercial Solar
+                        </a>
+
+                        <a class="home-marquee__item" href="solar-battery-storage.html">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="battery-charging" aria-hidden="true"></i>
+                            </span>
+                            Solar Battery Storage
+                        </a>
+
+                        <a class="home-marquee__item" href="solar-maintenance.html">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="wrench" aria-hidden="true"></i>
+                            </span>
+                            Solar Maintenance
+                        </a>
+
+                        <a class="home-marquee__item" href="solar-consultation.html">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="messages-square" aria-hidden="true"></i>
+                            </span>
+                            Solar Consultation
+                        </a>
+                    </div>
+
+                    <div class="home-marquee__group" aria-hidden="true">
+                        <a class="home-marquee__item" href="solar-panel-installation.html" tabindex="-1">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="panel-top" aria-hidden="true"></i>
+                            </span>
+                            Solar Panel Installation
+                        </a>
+
+                        <a class="home-marquee__item" href="residential-solar.html" tabindex="-1">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="house" aria-hidden="true"></i>
+                            </span>
+                            Residential Solar
+                        </a>
+
+                        <a class="home-marquee__item" href="commercial-solar.html" tabindex="-1">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="building-2" aria-hidden="true"></i>
+                            </span>
+                            Commercial Solar
+                        </a>
+
+                        <a class="home-marquee__item" href="solar-battery-storage.html" tabindex="-1">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="battery-charging" aria-hidden="true"></i>
+                            </span>
+                            Solar Battery Storage
+                        </a>
+
+                        <a class="home-marquee__item" href="solar-maintenance.html" tabindex="-1">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="wrench" aria-hidden="true"></i>
+                            </span>
+                            Solar Maintenance
+                        </a>
+
+                        <a class="home-marquee__item" href="solar-consultation.html" tabindex="-1">
+                            <span class="home-marquee__icon">
+                                <i data-lucide="messages-square" aria-hidden="true"></i>
+                            </span>
+                            Solar Consultation
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SWIPER -->
+            <section class="home-services section section--dark" aria-labelledby="home-services-title">
+                <span class="home-services__top-line" aria-hidden="true"></span>
+
+                <div class="container">
+                    <div class="section-heading section-heading--split">
+                        <div>
+                            <p class="section-kicker section-kicker--sun">Solar service categories</p>
+                            <h2 id="home-services-title">Explore Solar Service Categories</h2>
+                            <p>
+                                Browse common solar project categories and compare independent provider options
+                                before choosing who to contact.
+                            </p>
+                        </div>
+
+                        <div class="section-heading__actions">
+                            <div class="swiper-controls" aria-label="Services carousel controls">
+                                <button class="swiper-button" type="button" aria-label="Previous service"
+                                    data-carousel-prev>
+                                    <i data-lucide="arrow-left" aria-hidden="true"></i>
+                                </button>
+
+                                <button class="swiper-button" type="button" aria-label="Next service"
+                                    data-carousel-next>
+                                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                            <a class="btn btn--light btn--small" href="services.html">
+                                View All Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-shell home-services__carousel" data-carousel="global" data-autoplay="true">
+                        <div class="service-swiper">
+                            <div class="swiper-track" data-carousel-track>
+                                <article class="swiper-slide" data-carousel-slide>
+                                    <a class="photo-card home-services__card" href="solar-panel-installation.html"
+                                        aria-label="Solar Panel Installation">
+                                        <span class="photo-card__icon">
+                                            <i data-lucide="panel-top" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="photo-card__content">
+                                            <h3>Solar Panel Installation</h3>
+                                            <p>Compare local providers for new solar panel project options.</p>
+                                            <span class="card-link">View options</span>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <article class="swiper-slide" data-carousel-slide>
+                                    <a class="photo-card home-services__card" href="residential-solar.html"
+                                        aria-label="Residential Solar">
+                                        <span class="photo-card__icon">
+                                            <i data-lucide="house" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="photo-card__content">
+                                            <h3>Residential Solar</h3>
+                                            <p>Explore provider options for home solar systems.</p>
+                                            <span class="card-link">View options</span>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <article class="swiper-slide" data-carousel-slide>
+                                    <a class="photo-card home-services__card" href="commercial-solar.html"
+                                        aria-label="Commercial Solar">
+                                        <span class="photo-card__icon">
+                                            <i data-lucide="building-2" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="photo-card__content">
+                                            <h3>Commercial Solar</h3>
+                                            <p>Review solar provider categories for business properties.</p>
+                                            <span class="card-link">View options</span>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <article class="swiper-slide" data-carousel-slide>
+                                    <a class="photo-card home-services__card" href="solar-battery-storage.html"
+                                        aria-label="Solar Battery Storage">
+                                        <span class="photo-card__icon">
+                                            <i data-lucide="battery-charging" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="photo-card__content">
+                                            <h3>Solar Battery Storage</h3>
+                                            <p>Compare battery-ready solar options and storage support.</p>
+                                            <span class="card-link">View options</span>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <article class="swiper-slide" data-carousel-slide>
+                                    <a class="photo-card home-services__card" href="solar-maintenance.html"
+                                        aria-label="Solar Maintenance">
+                                        <span class="photo-card__icon">
+                                            <i data-lucide="wrench" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="photo-card__content">
+                                            <h3>Solar Maintenance</h3>
+                                            <p>Find providers for solar panel maintenance and system checks.</p>
+                                            <span class="card-link">View options</span>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <article class="swiper-slide" data-carousel-slide>
+                                    <a class="photo-card home-services__card" href="solar-consultation.html"
+                                        aria-label="Solar Consultation">
+                                        <span class="photo-card__icon">
+                                            <i data-lucide="messages-square" aria-hidden="true"></i>
+                                        </span>
+                                        <div class="photo-card__content">
+                                            <h3>Solar Consultation</h3>
+                                            <p>Request quote guidance and compare local solar options.</p>
+                                            <span class="card-link">View options</span>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination" data-carousel-pagination
+                            aria-label="Services carousel pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROUND BENEFITS -->
+            <section class="round-benefits" aria-labelledby="round-benefits-title">
+                <div class="container round-benefits__inner">
+                    <h2 class="sr-only" id="round-benefits-title">SOLAK solar comparison benefits</h2>
+
+                    <div class="round-benefits__list">
+                        <div class="round-benefit">
+                            <div class="round-benefit__circle">
+                                <span class="round-benefit__icon">
+                                    <i data-lucide="panel-top" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3>6 Solar Categories</h3>
+                        </div>
+
+                        <div class="round-benefit">
+                            <div class="round-benefit__circle">
+                                <span class="round-benefit__icon">
+                                    <i data-lucide="house" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3>Home &amp; Business Options</h3>
+                        </div>
+
+                        <div class="round-benefit">
+                            <div class="round-benefit__circle">
+                                <span class="round-benefit__icon">
+                                    <i data-lucide="battery-charging" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3>Battery Support</h3>
+                        </div>
+
+                        <div class="round-benefit">
+                            <div class="round-benefit__circle">
+                                <span class="round-benefit__icon">
+                                    <i data-lucide="file-check-2" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3>Quote Comparison</h3>
+                        </div>
+
+                        <div class="round-benefit">
+                            <div class="round-benefit__circle">
+                                <span class="round-benefit__icon">
+                                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <h3>Local Provider Search</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY COMPARE -->
+            <section class="home-why section section--soft" aria-labelledby="home-why-title">
+                <span class="dotted-corner dotted-corner--left" aria-hidden="true"></span>
+
+                <div class="container">
+                    <div class="home-why__layout">
+                        <div class="home-why__visual" aria-hidden="true">
+                            <span class="home-why__dot home-why__dot--one"></span>
+                            <span class="home-why__dot home-why__dot--two"></span>
+                            <span class="home-why__dot home-why__dot--three"></span>
+                            <img class="home-why__image" src="assets/images/solar-home-round.jpg" alt="">
+                        </div>
+
+                        <div class="home-why__content">
+                            <p class="section-kicker section-kicker--sun">Why compare</p>
+                            <h2 class="section-title" id="home-why-title">Why Compare Solar Providers?</h2>
+                            <p class="section-text">
+                                Solar projects can vary by roof type, property goals, system size, battery readiness,
+                                provider coverage, warranty terms, and quote details.
+                            </p>
+
+                            <div class="home-why__list" aria-label="Solar provider comparison points">
+                                <div class="home-why__item">Compare equipment options</div>
+                                <div class="home-why__item">Explore provider coverage</div>
+                                <div class="home-why__item">Review battery compatibility</div>
+                                <div class="home-why__item">Compare maintenance support</div>
+                                <div class="home-why__item">Check warranty terms</div>
+                                <div class="home-why__item">Review quote transparency</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ORBIT ECOSYSTEM -->
+            <section class="home-orbit section" aria-labelledby="home-orbit-title">
+                <span class="dotted-corner dotted-corner--right" aria-hidden="true"></span>
+
+                <div class="container">
+                    <div class="home-orbit__layout">
+                        <div class="home-orbit__content">
+                            <p class="section-kicker section-kicker--sun">Solar comparison ecosystem</p>
+                            <h2 class="section-title" id="home-orbit-title">One clean path to explore provider
+                                categories.</h2>
+                            <p class="section-text">
+                                SOLAK organizes common solar interests into clear categories so homeowners and
+                                businesses can review options before contacting independent solar companies.
+                            </p>
+
+                            <div class="hero__actions">
+                                <a class="btn btn--primary" href="contact.html#contact-form">
+                                    <span data-config="cta.quote">Request Solar Quotes</span>
+                                </a>
+
+                                <a class="btn btn--outline" href="services.html">
+                                    View Service Options
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="home-orbit__visual" aria-label="SOLAK solar service ecosystem">
+                            <div class="home-orbit__ring" aria-hidden="true"></div>
+
+                            <div class="home-orbit__center">
+                                <strong>SOLAK</strong>
+                            </div>
+
+                            <a class="home-orbit__node home-orbit__node--one" href="solar-panel-installation.html">
+                                Installation
+                            </a>
+
+                            <a class="home-orbit__node home-orbit__node--two" href="residential-solar.html">
+                                Residential
+                            </a>
+
+                            <a class="home-orbit__node home-orbit__node--three" href="commercial-solar.html">
+                                Commercial
+                            </a>
+
+                            <a class="home-orbit__node home-orbit__node--four" href="solar-battery-storage.html">
+                                Battery
+                            </a>
+
+                            <a class="home-orbit__node home-orbit__node--five" href="solar-maintenance.html">
+                                Maintenance
+                            </a>
+
+                            <a class="home-orbit__node home-orbit__node--six" href="solar-consultation.html">
+                                Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PREFOOTER CTA -->
+            <section class="prefooter-cta" aria-labelledby="prefooter-title">
+                <div class="container prefooter-cta__inner">
+                    <div>
+                        <h2 id="prefooter-title">Ready to compare solar provider options?</h2>
+                        <p>
+                            Explore categories and connect with independent providers near you.
+                        </p>
+                    </div>
+
+                    <div class="prefooter-cta__actions">
+                        <a class="btn btn--primary" href="contact.html#contact-form">
+                            <span data-config="cta.quote">Request Solar Quotes</span>
+                        </a>
+
+                        <a class="btn btn--light" href="tel:+18885550148" data-config-href="contact.phoneRaw">
+                            <i data-lucide="phone" aria-hidden="true"></i>
+                            <span data-config="cta.phone">Call Now</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__main">
+                    <div class="site-footer__brand">
+                        <a class="site-logo" href="index.html" aria-label="SOLAK home" data-site-logo>
+                            <span class="site-logo__icon" aria-hidden="true"></span>
+                            <span class="site-logo__text">SOLAK</span>
+                        </a>
+
+                        <p class="site-footer__description" data-config="footer.description">
+                            SOLAK is an independent solar provider comparison platform that helps homeowners and
+                            businesses explore local solar company options, review service categories, and request
+                            quotes from independent providers.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="site-footer__title">Navigation</h2>
+                        <ul class="site-footer__links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="site-footer__title">Services</h2>
+                        <ul class="site-footer__links" data-footer-services>
+                            <li><a href="solar-panel-installation.html">Solar Panel Installation</a></li>
+                            <li><a href="residential-solar.html">Residential Solar</a></li>
+                            <li><a href="commercial-solar.html">Commercial Solar</a></li>
+                            <li><a href="solar-battery-storage.html">Solar Battery Storage</a></li>
+                            <li><a href="solar-maintenance.html">Solar Maintenance</a></li>
+                            <li><a href="solar-consultation.html">Solar Consultation</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="site-footer__title">Contact</h2>
+                        <div class="site-footer__contact">
+                            <a href="tel:+18885550148" data-config-href="contact.phoneRaw">
+                                <i data-lucide="phone" aria-hidden="true"></i>
+                                <span data-config="contact.phoneDisplay">(888) 555-0148</span>
+                            </a>
+
+                            <a href="mailto:hello@solaksolar.com" data-config-mailto="contact.email">
+                                <i data-lucide="mail" aria-hidden="true"></i>
+                                <span data-config="contact.email">hello@solaksolar.com</span>
+                            </a>
+
+                            <span>
+                                <i data-lucide="clock-3" aria-hidden="true"></i>
+                                <span data-config="contact.supportHours">Mon–Fri, 8:00 AM–7:00 PM</span>
+                            </span>
+
+                            <span>
+                                <i data-lucide="map-pin" aria-hidden="true"></i>
+                                <span data-config="company.address">1846 Solar Ridge Avenue, Austin, TX 78701,
+                                    USA</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="site-footer__legal">
+                    <ul class="site-footer__links site-footer__meta" data-footer-legal>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+
+                    <div class="site-footer__meta">
+                        <span>
+                            Company:
+                            <strong data-config="company.name">SOLAK</strong>
+                        </span>
+
+                        <span>
+                            Company ID:
+                            <strong data-config="company.companyId">SLK-SOLAR-4827</strong>
+                        </span>
+
+                        <span data-config="company.serviceArea">
+                            Independent solar provider comparison across selected areas in the United States
+                        </span>
+                    </div>
+
+                    <p class="site-footer__disclaimer" data-config="footer.disclaimer">
+                        Disclaimer: This site is a free service to assist homeowners in connecting with local service
+                        providers.
+                        All contractors/providers are independent and this site does not warrant or guarantee any work
+                        performed.
+                        It is the responsibility of the homeowner to verify that the hired contractor furnishes the
+                        necessary
+                        license and insurance required for the work being performed. All persons depicted in a photo or
+                        video
+                        are actors or models and not contractors listed on this site.
+                    </p>
+                </div>
+
+                <div class="site-footer__bottom">
+                    <p>
+                        © <span data-current-year></span>
+                        <span data-config="company.name">SOLAK</span>. All rights reserved.
+                    </p>
+
+                    <p>Independent solar provider comparison platform.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

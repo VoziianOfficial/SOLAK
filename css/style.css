@@ -2357,3 +2357,81 @@ html {
         scroll-margin-top: calc(var(--fixed-header-height) + 16px);
     }
 }
+
+/* =========================================================
+   HOME SERVICES CARD IMAGE VISIBILITY FIX
+   Only for home services swiper
+========================================================= */
+
+.home-services .home-services__card.photo-card {
+    display: block;
+    width: 100%;
+    min-height: 320px;
+    isolation: isolate;
+
+    background-image:
+        linear-gradient(180deg,
+            rgba(3, 42, 90, 0.04) 0%,
+            rgba(3, 42, 90, 0.14) 42%,
+            rgba(3, 42, 90, 0.72) 100%),
+        var(--card-image) !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.home-services .home-services__card.photo-card::before {
+    z-index: 1;
+    pointer-events: none;
+}
+
+.home-services .home-services__card.photo-card::after {
+    z-index: 3;
+    pointer-events: none;
+}
+
+.home-services .home-services__card .photo-card__content,
+.home-services .home-services__card .photo-card__icon {
+    position: relative;
+    z-index: 4;
+}
+
+/* =========================================================
+   HOME SERVICES ICON POSITION ONLY
+   Keep original icon style, only move top-right
+========================================================= */
+
+.home-services .home-services__card.photo-card {
+    position: relative;
+}
+
+.home-services .home-services__card .photo-card__icon {
+    position: absolute !important;
+    top: 22px !important;
+    right: 22px !important;
+    z-index: 5;
+
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+
+    color: rgba(255, 255, 255, 0.95) !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+.home-services .home-services__card .photo-card__icon svg,
+.home-services .home-services__card .photo-card__icon i {
+    width: 42px !important;
+    height: 42px !important;
+    stroke-width: 1.7;
+}
+
+.home-services .home-services__card:hover .photo-card__icon {
+    color: var(--color-yellow) !important;
+    transform: translateY(-3px) rotate(-4deg);
+    filter: drop-shadow(0 8px 14px rgba(255, 210, 63, 0.24));
+}

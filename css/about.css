@@ -823,3 +823,49 @@
         height: 215px;
     }
 }
+
+/* =========================================================
+   ABOUT VALUES MOBILE ICON FIX
+   Icon on the right without overlapping text
+========================================================= */
+
+@media (max-width: 767px) {
+    .about-values .about-value {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 48px;
+        grid-template-areas:
+            "title icon"
+            "text icon";
+        column-gap: 14px;
+        align-items: start;
+        padding-right: 0 !important;
+    }
+
+    .about-values .about-value__icon {
+        position: static !important;
+        grid-area: icon;
+        justify-self: end;
+        align-self: start;
+        margin: 0 !important;
+    }
+
+    .about-values .about-value h3 {
+        grid-area: title;
+        min-width: 0;
+        padding-right: 0 !important;
+    }
+
+    .about-values .about-value p {
+        grid-area: text;
+        min-width: 0;
+        max-width: none;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .about-values .about-value {
+        grid-template-columns: minmax(0, 1fr) 40px;
+        column-gap: 12px;
+    }
+}

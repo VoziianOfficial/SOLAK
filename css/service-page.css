@@ -864,3 +864,47 @@
         min-height: 270px;
     }
 }
+
+/* =========================================================
+   SERVICE FACTORS MOBILE ICON POSITION
+   Keep icon style, move icon to the right
+========================================================= */
+
+@media (max-width: 767px) {
+    .service-factors .service-factor {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 52px;
+        grid-template-areas:
+            "title icon"
+            "text icon";
+        column-gap: 14px;
+        align-items: start;
+    }
+
+    .service-factors .service-factor__icon {
+        grid-area: icon;
+        justify-self: end;
+        align-self: start;
+        margin: 0 !important;
+    }
+
+    .service-factors .service-factor h3 {
+        grid-area: title;
+        min-width: 0;
+        padding-right: 0 !important;
+    }
+
+    .service-factors .service-factor p {
+        grid-area: text;
+        min-width: 0;
+        max-width: none;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .service-factors .service-factor {
+        grid-template-columns: minmax(0, 1fr) 44px;
+        column-gap: 12px;
+    }
+}

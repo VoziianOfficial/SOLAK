@@ -2296,3 +2296,64 @@ strong {
     opacity: 1 !important;
     transform: none !important;
 }
+
+/* =========================================================
+   FIXED STICKY HEADER — FINAL OVERRIDE
+========================================================= */
+
+:root {
+    --fixed-header-height: calc(var(--header-top-height) + var(--header-main-height));
+}
+
+html {
+    scroll-padding-top: calc(var(--fixed-header-height) + 16px);
+}
+
+.page {
+    padding-top: var(--fixed-header-height);
+}
+
+.site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 5000;
+    transform: translateZ(0);
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+}
+
+.mobile-menu {
+    z-index: 9000;
+}
+
+.skip-link {
+    z-index: 10000;
+}
+
+[id] {
+    scroll-margin-top: calc(var(--fixed-header-height) + 18px);
+}
+
+@media (max-width: 1023px) {
+    :root {
+        --fixed-header-height: var(--header-main-height);
+    }
+
+    .page {
+        padding-top: var(--fixed-header-height);
+    }
+
+    html {
+        scroll-padding-top: calc(var(--fixed-header-height) + 14px);
+    }
+
+    [id] {
+        scroll-margin-top: calc(var(--fixed-header-height) + 16px);
+    }
+}

@@ -758,34 +758,3 @@
         height: 20px;
     }
 }
-/* =========================================================
-   REMOVE TOP/BOTTOM PADDINGS
-   Services process + FAQ
-========================================================= */
-
-.services-process,
-.services-faq {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-block: 0 !important;
-}
-
-@media (max-width: 1023px) {
-
-    .services-process,
-    .services-faq {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        padding-block: 0 !important;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .services-process,
-    .services-faq {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        padding-block: 0 !important;
-    }
-}

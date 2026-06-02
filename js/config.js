@@ -79,7 +79,7 @@ window.SITE_CONFIG = {
         {
             title: 'Residential Solar',
             url: 'residential-solar.html',
-            short: 'Explore provider options for home solar systems.',
+            short: 'Explore provider options for home systems.',
             image: 'assets/images/residential-solar.jpg',
             icon: 'home'
         },

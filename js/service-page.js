@@ -106,11 +106,8 @@
             if (!image) return;
 
             card.style.setProperty('--card-image', `url("../${image}")`);
-            card.style.setProperty(
-                'background-image',
-                `linear-gradient(180deg, rgba(3, 42, 90, 0.04) 0%, rgba(3, 42, 90, 0.14) 42%, rgba(3, 42, 90, 0.72) 100%), url("${image}")`,
-                'important'
-            );
+            card.style.backgroundImage =
+                `linear-gradient(180deg, rgba(3, 42, 90, 0.04) 0%, rgba(3, 42, 90, 0.14) 42%, rgba(3, 42, 90, 0.72) 100%), url("${image}")`;
             card.style.backgroundSize = 'cover';
             card.style.backgroundPosition = 'center';
             card.style.backgroundRepeat = 'no-repeat';

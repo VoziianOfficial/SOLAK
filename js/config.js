@@ -100,7 +100,7 @@ window.SITE_CONFIG = {
         {
             title: 'Solar Maintenance',
             url: 'solar-maintenance.html',
-            short: 'Find providers for solar panel maintenance and system checks.',
+            short: 'Find providers for solar panel maintenance.',
             image: 'assets/images/solar-maintenance.jpg',
             icon: 'maintenance'
         },

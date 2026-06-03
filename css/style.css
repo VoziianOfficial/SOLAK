@@ -2514,11 +2514,6 @@ html {
     }
 }
 
-/* =========================================================
-   PAGE HERO CREATIVE UNEVEN BOTTOMS
-   Services / About / Contact
-========================================================= */
-
 .page-hero--shape {
     position: relative;
     min-height: 560px;
@@ -2568,7 +2563,6 @@ html {
     fill: var(--color-white);
 }
 
-/* SERVICES — more energetic cut */
 .page-hero--shape-services {
     background:
         radial-gradient(circle at 18% 20%, rgba(22, 184, 62, 0.2), transparent 27%),
@@ -2583,7 +2577,6 @@ html {
     fill: var(--color-white);
 }
 
-/* ABOUT — softer wave */
 .page-hero--shape-about {
     background:
         radial-gradient(circle at 14% 18%, rgba(255, 210, 63, 0.16), transparent 26%),
@@ -2598,7 +2591,6 @@ html {
     fill: var(--color-white);
 }
 
-/* CONTACT — stronger dynamic bottom */
 .page-hero--shape-contact {
     background:
         radial-gradient(circle at 20% 18%, rgba(22, 184, 62, 0.2), transparent 28%),
@@ -2612,8 +2604,6 @@ html {
 .page-hero--shape-contact .page-hero-shape path {
     fill: var(--color-blue-soft);
 }
-
-/* Extra small glossy dots */
 
 .page-hero--shape .page-hero__content::before,
 .page-hero--shape .page-hero__content::after {
@@ -2641,8 +2631,6 @@ html {
     box-shadow: 0 0 0 8px rgba(22, 184, 62, 0.13);
 }
 
-/* TABLET */
-
 @media (max-width: 1023px) {
     .page-hero--shape {
         min-height: auto;
@@ -2658,8 +2646,6 @@ html {
         height: 118px;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .page-hero--shape {

@@ -871,10 +871,6 @@
     }
 }
 
-/* =========================================================
-   SERVICE FACTORS — DARK SOLAR CONTROL
-========================================================= */
-
 .service-factors--dark-control {
     --solar-control-value: 72;
     --sun-x: 72%;
@@ -1056,8 +1052,6 @@
     color: var(--color-yellow);
 }
 
-/* LEVER */
-
 .solar-dark-control__lever {
     position: relative;
     display: grid;
@@ -1116,8 +1110,6 @@
     accent-color: var(--color-yellow);
     cursor: pointer;
 }
-
-/* ROUND FACTORS */
 
 .solar-dark-control__orbits {
     position: relative;
@@ -1241,8 +1233,6 @@
     filter: drop-shadow(0 10px 18px rgba(255, 210, 63, 0.18));
 }
 
-/* ANIMATIONS */
-
 @keyframes solarDarkRaysSpin {
     to {
         transform: translate(-50%, -50%) scale(var(--sun-scale)) rotate(360deg);
@@ -1266,8 +1256,6 @@
         opacity: 0;
     }
 }
-
-/* TABLET */
 
 @media (max-width: 1023px) {
     .service-factors--dark-control {
@@ -1314,8 +1302,6 @@
         scroll-snap-align: start;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .service-factors--dark-control {
@@ -1369,8 +1355,6 @@
     }
 }
 
-/* REDUCED MOTION */
-
 @media (prefers-reduced-motion: reduce) {
 
     .solar-dark-control__rays,
@@ -1379,10 +1363,6 @@
         animation: none !important;
     }
 }
-
-/* =========================================================
-   FIX — SUN CENTER + RAYS MOVE AS ONE OBJECT
-========================================================= */
 
 .solar-dark-control__sun,
 .solar-dark-control__rays {
@@ -1396,7 +1376,6 @@
         opacity 420ms ease;
 }
 
-/* Сам блок лучей теперь двигается вместе с солнцем */
 .solar-dark-control__rays {
     width: 330px;
     height: 330px;
@@ -1405,7 +1384,6 @@
     opacity: calc(var(--sun-opacity) * 0.5);
 }
 
-/* А крутятся только лучи внутри, не весь блок */
 .solar-dark-control__rays::before {
     content: "";
     position: absolute;
@@ -1440,10 +1418,6 @@
         transform: rotate(360deg);
     }
 }
-
-/* =========================================================
-   REAL RUNNING MARQUEE AFTER SERVICE HERO
-========================================================= */
 
 .solar-loop-marquee {
     position: relative;
@@ -1621,8 +1595,6 @@
     }
 }
 
-/* TABLET */
-
 @media (max-width: 1023px) {
     .solar-loop-marquee__shell {
         width: min(100% - 32px, var(--container));
@@ -1643,8 +1615,6 @@
         align-items: center;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .solar-loop-marquee {
@@ -1673,8 +1643,6 @@
         animation-duration: 20s;
     }
 }
-
-/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
 

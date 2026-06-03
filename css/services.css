@@ -723,10 +723,6 @@
     }
 }
 
-/* =========================================================
-   SERVICES HERO — RISING / SETTING SUN ANIMATION
-========================================================= */
-
 .page-hero--shape-services {
     overflow: hidden;
 }
@@ -832,8 +828,6 @@
     }
 }
 
-/* TABLET */
-
 @media (max-width: 1023px) {
     .services-sun-cycle {
         width: 74px;
@@ -874,8 +868,6 @@
     }
 }
 
-/* MOBILE */
-
 @media (max-width: 767px) {
     .services-sun-cycle {
         width: 58px;
@@ -890,8 +882,6 @@
     }
 }
 
-/* ACCESSIBILITY */
-
 @media (prefers-reduced-motion: reduce) {
 
     .services-sun-cycle,
@@ -904,10 +894,6 @@
         transform: translate3d(0, -42px, 0);
     }
 }
-
-/* =========================================================
-   SERVICES HERO — SUN RISE LEFT / SET RIGHT
-========================================================= */
 
 .page-hero--shape-services {
     overflow: hidden;
@@ -1023,26 +1009,19 @@
     }
 }
 
-/* =========================================================
-   SERVICES HERO SUN BEHIND TEXT
-========================================================= */
-
 .page-hero--shape-services {
     isolation: isolate;
 }
 
-/* Солнце уходит за весь текстовый контент */
 .page-hero--shape-services .services-sun-cycle {
     z-index: 2 !important;
     pointer-events: none;
 }
 
-/* Лучи тоже за текстом */
 .page-hero--shape-services .ray-bg {
     z-index: 1;
 }
 
-/* Контент всегда поверх солнца */
 .page-hero--shape-services .container {
     position: relative;
     z-index: 6 !important;
@@ -1053,7 +1032,6 @@
     z-index: 7 !important;
 }
 
-/* Чтобы текст читался, когда солнце проходит за ним */
 .page-hero--shape-services .page-hero__title,
 .page-hero--shape-services .page-hero__text,
 .page-hero--shape-services .section-kicker,
@@ -1075,11 +1053,6 @@
 .page-hero--shape-services .services-sun-cycle {
     opacity: 0.58;
 }
-
-/* =========================================================
-   SERVICES HERO — FASTER SUN APPEARANCE
-   Sun comes out from the left faster
-========================================================= */
 
 .services-sun-cycle {
     animation: servicesSunLeftToRight 13s ease-in-out infinite !important;
@@ -1181,11 +1154,6 @@
     }
 }
 
-/* =========================================================
-   HOME GLOSS STRIP — CLEAN LIGHT SOLAR BEAM
-   No cards, no numbers, no circles
-========================================================= */
-
 .home-gloss-strip--beam {
     position: relative;
     padding-block: 42px;
@@ -1275,8 +1243,6 @@
     margin-top: 18px;
 }
 
-/* FLOW */
-
 .home-beam-strip__flow {
     position: relative;
     display: grid;
@@ -1289,7 +1255,6 @@
     overflow: hidden;
 }
 
-/* main soft beam */
 .home-beam-strip__flow::before {
     content: "";
     position: absolute;
@@ -1308,7 +1273,6 @@
     pointer-events: none;
 }
 
-/* thin center line */
 .home-beam-strip__flow::after {
     content: "";
     position: absolute;
@@ -1342,7 +1306,6 @@
         color var(--transition-base);
 }
 
-/* diagonal separators */
 .home-beam-strip__point:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -1359,7 +1322,6 @@
     pointer-events: none;
 }
 
-/* small rectangular tick on beam, not circle */
 .home-beam-strip__point::before {
     content: "";
     position: absolute;
@@ -1433,7 +1395,6 @@
     color: var(--color-green-deep);
 }
 
-/* moving shine across beam */
 .home-beam-strip__flow .home-beam-strip__point:first-child::after {
     content: "";
     position: absolute;
@@ -1472,8 +1433,6 @@
     }
 }
 
-/* TABLET */
-
 @media (max-width: 1023px) {
     .home-gloss-strip--beam {
         padding-block: 38px;
@@ -1510,8 +1469,6 @@
         right: auto;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .home-gloss-strip--beam {
@@ -1559,8 +1516,6 @@
         font-size: 0.76rem;
     }
 }
-
-/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
     .home-beam-strip__flow .home-beam-strip__point:first-child::after {

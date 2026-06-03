@@ -1710,10 +1710,6 @@
     }
 }
 
-/* =========================================================
-   HOME HERO — WAVE + ROUND PHOTO VERSION
-========================================================= */
-
 .home-hero--wave {
     min-height: 720px;
     padding-bottom: 120px;
@@ -1796,8 +1792,6 @@
     bottom: 80px;
     background: rgba(22, 184, 62, 0.12);
 }
-
-/* RIGHT ROUND PHOTO */
 
 .home-hero-wave__visual {
     position: relative;
@@ -1931,8 +1925,6 @@
     bottom: -14px;
 }
 
-/* SERVICE RIBBON */
-
 .home-hero-wave__services {
     position: relative;
     z-index: 5;
@@ -2019,8 +2011,6 @@
     filter: drop-shadow(0 10px 18px rgba(22, 184, 62, 0.24));
 }
 
-/* UNEVEN BOTTOM */
-
 .home-hero-wave__bottom {
     position: absolute;
     left: 0;
@@ -2052,8 +2042,6 @@
         transform: rotate(-360deg);
     }
 }
-
-/* TABLET */
 
 @media (max-width: 1023px) {
     .home-hero--wave {
@@ -2108,8 +2096,6 @@
         margin-inline: auto;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .home-hero--wave {
@@ -2240,11 +2226,6 @@
     }
 }
 
-/* =========================================================
-   HOME HERO WAVE — TABLET/MOBILE CLEAN ADAPTATION
-   Hide services + badges, square photo, no overflow
-========================================================= */
-
 @media (max-width: 1023px) {
     .home-hero--wave {
         min-height: auto;
@@ -2281,7 +2262,6 @@
         justify-content: center;
     }
 
-    /* Hide on tablet/mobile */
     .home-hero-wave__services,
     .home-hero-wave__badge {
         display: none !important;
@@ -2320,7 +2300,6 @@
         border-width: 12px;
     }
 
-    /* Rings are removed on smaller screens so the block does not overflow */
     .home-hero-wave__ring {
         display: none !important;
     }
@@ -2447,10 +2426,6 @@
     }
 }
 
-/* =========================================================
-   HOME HERO WAVE — HIDE PHOTO ON TABLET/MOBILE
-========================================================= */
-
 @media (max-width: 1023px) {
     .home-hero-wave__visual {
         display: none !important;
@@ -2477,10 +2452,6 @@
         max-width: 100%;
     }
 }
-
-/* =========================================================
-   HOME HERO TITLE CENTER ON TABLET/MOBILE
-========================================================= */
 
 @media (max-width: 1023px) {
     .home-hero--wave .home-hero-wave__content {
@@ -2512,10 +2483,6 @@
         text-wrap: balance;
     }
 }
-
-/* =========================================================
-   HOME QUOTE DECODER — DARK HORIZONTAL FLOW
-========================================================= */
 
 .home-quote-decoder--dark-flow {
     position: relative;
@@ -2632,8 +2599,6 @@
     gap: 12px;
     margin-top: 26px;
 }
-
-/* RIGHT FLOW */
 
 .quote-flow__map {
     position: relative;
@@ -2760,8 +2725,6 @@
     flex: 0 0 auto;
 }
 
-/* TABLET */
-
 @media (max-width: 1023px) {
     .home-quote-decoder--dark-flow {
         padding-block: 48px;
@@ -2803,8 +2766,6 @@
         opacity: 0.35;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .home-quote-decoder--dark-flow {
@@ -2896,17 +2857,11 @@
     }
 }
 
-/* =========================================================
-   FIX — QUOTE FLOW SMOOTH HERO WAVES
-   Keeps your section, only rounds top and bottom background
-========================================================= */
-
 .home-quote-decoder--dark-flow {
     clip-path: none !important;
     padding-block: 96px 108px;
 }
 
-/* убрать старые ломаные clip-path на планшетах и мобилках */
 @media (max-width: 1023px) {
     .home-quote-decoder--dark-flow {
         clip-path: none !important;
@@ -2921,7 +2876,6 @@
     }
 }
 
-/* SVG waves */
 .quote-flow-wave {
     position: absolute;
     left: 0;
@@ -2950,19 +2904,16 @@
     height: 92px;
 }
 
-/* чтобы контент был выше волн */
 .home-quote-decoder--dark-flow .container {
     position: relative;
     z-index: 5;
 }
 
-/* декоративные линии и солнце пусть остаются внутри фона */
 .quote-flow-bg__sun,
 .quote-flow-bg__line {
     z-index: 1;
 }
 
-/* TABLET */
 @media (max-width: 1023px) {
     .quote-flow-wave--top {
         height: 72px;
@@ -2973,7 +2924,6 @@
     }
 }
 
-/* MOBILE */
 @media (max-width: 767px) {
     .quote-flow-wave--top {
         height: 58px;
@@ -2983,10 +2933,6 @@
         height: 64px;
     }
 }
-
-/* =========================================================
-   FIX — QUOTE FLOW FIT INSIDE WAVES
-========================================================= */
 
 .home-quote-decoder--dark-flow {
     padding-block: 88px 116px !important;
@@ -3005,7 +2951,6 @@
     bottom: 0;
 }
 
-/* уменьшаем волны, чтобы они не съедали слишком много места */
 .quote-flow-wave--top {
     height: 68px !important;
 }
@@ -3014,7 +2959,6 @@
     height: 74px !important;
 }
 
-/* TABLET */
 @media (max-width: 1023px) {
     .home-quote-decoder--dark-flow {
         padding-block: 78px 104px !important;
@@ -3037,7 +2981,6 @@
     }
 }
 
-/* MOBILE */
 @media (max-width: 767px) {
     .home-quote-decoder--dark-flow {
         padding-block: 68px 92px !important;
@@ -3068,23 +3011,16 @@
     }
 }
 
-/* =========================================================
-   HOME ORBIT — CLEAN SVG ENERGY MOVEMENT
-========================================================= */
-
-/* убираем неудачные псевдо-линии, если они уже были добавлены */
 .home-orbit__visual::before,
 .home-orbit__visual::after {
     display: none !important;
 }
 
-/* старые кольца оставляем как мягкую базу, но без анимации */
 .home-orbit__ring {
     z-index: 1;
     animation: none !important;
 }
 
-/* SVG-энергия поверх существующих линий */
 .home-orbit__energy {
     position: absolute;
     inset: 0;
@@ -3095,7 +3031,6 @@
     overflow: visible;
 }
 
-/* базовые тихие линии */
 .home-orbit__energy-base {
     fill: none;
     stroke-width: 1.2;
@@ -3114,7 +3049,6 @@
     stroke: rgba(255, 210, 63, 0.28);
 }
 
-/* бегущий желтый свет */
 .home-orbit__energy-run {
     fill: none;
     stroke: var(--color-yellow);
@@ -3124,27 +3058,23 @@
     filter: drop-shadow(0 0 8px rgba(255, 210, 63, 0.55));
 }
 
-/* внешний круг */
 .home-orbit__energy-run--outer {
     stroke-dasharray: 74 1120;
     animation: homeOrbitDashForward 7s linear infinite;
 }
 
-/* средний круг — в обратную сторону */
 .home-orbit__energy-run--middle {
     stroke-dasharray: 58 920;
     animation: homeOrbitDashBackward 9s linear infinite;
     opacity: 0.9;
 }
 
-/* внутренний круг — быстрее */
 .home-orbit__energy-run--inner {
     stroke-dasharray: 46 720;
     animation: homeOrbitDashForward 5.8s linear infinite;
     opacity: 0.95;
 }
 
-/* центр и пункты выше SVG */
 .home-orbit__center {
     z-index: 6;
 }
@@ -3173,7 +3103,6 @@
     }
 }
 
-/* при наведении чуть живее, но не бешено */
 .home-orbit__visual:hover .home-orbit__energy-run--outer {
     animation-duration: 5.8s;
 }
@@ -3186,21 +3115,18 @@
     animation-duration: 4.8s;
 }
 
-/* планшет */
 @media (max-width: 1023px) {
     .home-orbit__energy-run {
         stroke-width: 2.6;
     }
 }
 
-/* мобилка: у тебя орбита становится карточками, поэтому SVG выключаем */
 @media (max-width: 767px) {
     .home-orbit__energy {
         display: none;
     }
 }
 
-/* reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .home-orbit__energy-run {
         animation: none !important;

@@ -842,10 +842,6 @@
     }
 }
 
-/* =========================================================
-   ABOUT HERO — HALF SUN PORTAL LEFT
-========================================================= */
-
 .page-hero--shape-about {
     isolation: isolate;
     overflow: hidden;
@@ -1021,8 +1017,6 @@
     }
 }
 
-/* TABLET */
-
 @media (max-width: 1023px) {
     .about-sun-portal {
         left: -300px;
@@ -1041,8 +1035,6 @@
         width: 280px;
     }
 }
-
-/* MOBILE */
 
 @media (max-width: 767px) {
     .about-sun-portal {
@@ -1071,8 +1063,6 @@
         height: 10px;
     }
 }
-
-/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 

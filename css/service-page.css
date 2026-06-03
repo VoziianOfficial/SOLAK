@@ -1651,10 +1651,7 @@
         animation: none !important;
     }
 }
-/* =========================================================
-   SOLAR DARK CONTROL — MOBILE BRIGHTER DARK CIRCLES
-   Only mobile, layout not touched
-========================================================= */
+
 
 @media (max-width: 767px) {
     .solar-dark-control__orbits .solar-dark-factor {
@@ -1726,10 +1723,6 @@
     }
 }
 
-/* =========================================================
-   SERVICE HERO CHIPS — TEXT TAGS WITH BRIGHT UNDERLINE
-   No visible icons, more unique look
-========================================================= */
 
 .service-hero__meta {
     display: flex;
@@ -1769,18 +1762,18 @@
         background var(--transition-base);
 }
 
-/* возвращаем текст ровно, потому что сама плашка наклонена */
+
 .service-hero__chip {
     text-shadow: 0 1px 16px rgba(0, 0, 0, 0.16);
 }
 
-/* иконки полностью убираем */
+
 .service-hero__chip i,
 .service-hero__chip svg {
     display: none !important;
 }
 
-/* яркое нижнее подчёркивание */
+
 .service-hero__chip::before {
     content: "";
     position: absolute;
@@ -1804,7 +1797,7 @@
         box-shadow var(--transition-base);
 }
 
-/* диагональный световой проход */
+
 .service-hero__chip::after {
     content: "";
     position: absolute;
@@ -1819,7 +1812,7 @@
     transition: transform 0.7s ease;
 }
 
-/* маленький светящийся угол */
+
 .service-hero__chip span,
 .service-hero__chip strong {
     position: relative;
@@ -1838,7 +1831,7 @@
     --chip-accent: #7DDCFF;
 }
 
-/* маленькая засечка сверху справа */
+
 .service-hero__chip:nth-child(1)::marker {
     display: none;
 }
@@ -1867,14 +1860,14 @@
     transform: translateX(130%) skewX(-18deg);
 }
 
-/* добавляем маленькую яркую точку-акцент, но не как иконку */
+
 .service-hero__chip {
     background-image:
         radial-gradient(circle at calc(100% - 16px) 13px, var(--chip-accent) 0 3px, transparent 4px),
         linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
 }
 
-/* MOBILE */
+
 @media (max-width: 767px) {
     .service-hero__meta {
         display: grid;

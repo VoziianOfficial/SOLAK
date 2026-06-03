@@ -2685,17 +2685,14 @@ html {
     }
 }
 
-/* =========================================================
-   GLOBAL SOFT RADIUS FIX — BUTTONS / HERO CHIPS / BADGES
-   Keeps layout, only adds light rounded style
-========================================================= */
+
 
 :root {
     --radius-soft: 14px;
     --radius-soft-lg: 22px;
 }
 
-/* кнопки по всему сайту */
+
 .btn,
 .icon-btn,
 .swiper-button,
@@ -2704,7 +2701,7 @@ html {
     border-radius: var(--radius-soft) !important;
 }
 
-/* маленькие кнопки */
+
 .btn--small {
     border-radius: 12px !important;
 }
@@ -2720,7 +2717,7 @@ html {
     border-radius: var(--radius-soft) !important;
 }
 
-/* эти плашки на service hero: Provider categories / Quote comparison / Warranty questions */
+
 .service-hero__chip,
 .hero__chip,
 .page-hero__chip {
@@ -2732,13 +2729,13 @@ html {
         inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-/* если где-то используются hero-service-link / hero-solar-flow */
+
 .hero-service-link,
 .hero-solar-flow__item {
     border-radius: var(--radius-soft) !important;
 }
 
-/* dropdown / menu / footer плашки */
+
 .services-dropdown,
 .services-dropdown__link,
 .mobile-menu__contact,
@@ -2746,7 +2743,7 @@ html {
     border-radius: var(--radius-soft) !important;
 }
 
-/* формы */
+
 .form-input,
 .form-select,
 .form-textarea,
@@ -2756,7 +2753,6 @@ html {
     border-radius: var(--radius-soft) !important;
 }
 
-/* FAQ и notice-блоки */
 .service-overview__notice,
 .service-faq__notice,
 .services-faq__note,
@@ -2765,7 +2761,7 @@ html {
     border-radius: var(--radius-soft) !important;
 }
 
-/* карточки/фото — лёгкое скругление, не слишком круглое */
+
 .service-factor,
 .provider-factor,
 .home-gloss-strip__item,
@@ -2776,7 +2772,7 @@ html {
     border-radius: var(--radius-soft-lg) !important;
 }
 
-/* круглые иконки оставляем круглыми */
+
 .services-process__icon,
 .quote-flow__dot,
 .solar-dark-factor__icon,
@@ -2785,7 +2781,7 @@ html {
     border-radius: 999px !important;
 }
 
-/* чтобы картинки внутри карточек не вылезали за скругления */
+
 .photo-card,
 .service-photo-split__photo,
 .service-overview__panel,
@@ -2793,7 +2789,7 @@ html {
     overflow: hidden;
 }
 
-/* mobile — чуть меньше радиус, чтобы не выглядело громоздко */
+
 @media (max-width: 767px) {
     :root {
         --radius-soft: 12px;
@@ -2807,9 +2803,6 @@ html {
     }
 }
 
-/* =========================================================
-   FIX — DO NOT ROUND PHOTO SERVICE CARDS
-========================================================= */
 
 .home-services__card.photo-card,
 .related-services__card.photo-card,

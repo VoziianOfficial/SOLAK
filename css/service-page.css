@@ -1725,3 +1725,187 @@
             0 0 22px rgba(22, 184, 62, 0.26) !important;
     }
 }
+
+/* =========================================================
+   SERVICE HERO CHIPS — TEXT TAGS WITH BRIGHT UNDERLINE
+   No visible icons, more unique look
+========================================================= */
+
+.service-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.service-hero__chip {
+    --chip-accent: var(--color-yellow);
+
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 12px 20px 14px;
+    color: rgba(255, 255, 255, 0.9);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 18px !important;
+    box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(14px);
+    font-size: 0.86rem;
+    font-weight: 850;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    overflow: hidden;
+    transform: skewX(-8deg);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base);
+}
+
+/* возвращаем текст ровно, потому что сама плашка наклонена */
+.service-hero__chip {
+    text-shadow: 0 1px 16px rgba(0, 0, 0, 0.16);
+}
+
+/* иконки полностью убираем */
+.service-hero__chip i,
+.service-hero__chip svg {
+    display: none !important;
+}
+
+/* яркое нижнее подчёркивание */
+.service-hero__chip::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 7px;
+    z-index: -1;
+    height: 3px;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg,
+            var(--chip-accent),
+            rgba(255, 255, 255, 0.92),
+            transparent);
+    box-shadow:
+        0 0 16px color-mix(in srgb, var(--chip-accent) 48%, transparent),
+        0 0 28px color-mix(in srgb, var(--chip-accent) 24%, transparent);
+    transition:
+        right var(--transition-base),
+        height var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+/* диагональный световой проход */
+.service-hero__chip::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    transform: translateX(-130%) skewX(-18deg);
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.24),
+            transparent);
+    transition: transform 0.7s ease;
+}
+
+/* маленький светящийся угол */
+.service-hero__chip span,
+.service-hero__chip strong {
+    position: relative;
+}
+
+.service-hero__chip:nth-child(1) {
+    --chip-accent: var(--color-yellow);
+}
+
+.service-hero__chip:nth-child(2) {
+    --chip-accent: var(--color-green);
+    transform: skewX(8deg);
+}
+
+.service-hero__chip:nth-child(3) {
+    --chip-accent: #7DDCFF;
+}
+
+/* маленькая засечка сверху справа */
+.service-hero__chip:nth-child(1)::marker {
+    display: none;
+}
+
+.service-hero__chip:hover {
+    transform: skewX(-8deg) translateY(-3px);
+    border-color: color-mix(in srgb, var(--chip-accent) 52%, rgba(255, 255, 255, 0.22));
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.17), rgba(255, 255, 255, 0.07));
+    box-shadow:
+        0 20px 44px rgba(0, 0, 0, 0.22),
+        0 0 26px color-mix(in srgb, var(--chip-accent) 20%, transparent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.service-hero__chip:nth-child(2):hover {
+    transform: skewX(8deg) translateY(-3px);
+}
+
+.service-hero__chip:hover::before {
+    right: 38px;
+    height: 4px;
+}
+
+.service-hero__chip:hover::after {
+    transform: translateX(130%) skewX(-18deg);
+}
+
+/* добавляем маленькую яркую точку-акцент, но не как иконку */
+.service-hero__chip {
+    background-image:
+        radial-gradient(circle at calc(100% - 16px) 13px, var(--chip-accent) 0 3px, transparent 4px),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+    .service-hero__meta {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 22px;
+    }
+
+    .service-hero__chip,
+    .service-hero__chip:nth-child(2) {
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+        padding: 12px 16px 14px;
+        transform: none;
+        border-radius: 16px !important;
+        text-align: center;
+    }
+
+    .service-hero__chip:hover,
+    .service-hero__chip:nth-child(2):hover {
+        transform: translateY(-2px);
+    }
+
+    .service-hero__chip::before {
+        left: 18px;
+        right: 18px;
+        bottom: 7px;
+    }
+
+    .service-hero__chip:hover::before {
+        right: 42px;
+    }
+}

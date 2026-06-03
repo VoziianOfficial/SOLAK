@@ -2684,3 +2684,147 @@ html {
         display: none;
     }
 }
+
+/* =========================================================
+   GLOBAL SOFT RADIUS FIX — BUTTONS / HERO CHIPS / BADGES
+   Keeps layout, only adds light rounded style
+========================================================= */
+
+:root {
+    --radius-soft: 14px;
+    --radius-soft-lg: 22px;
+}
+
+/* кнопки по всему сайту */
+.btn,
+.icon-btn,
+.swiper-button,
+.mobile-menu-toggle,
+.mobile-menu__close {
+    border-radius: var(--radius-soft) !important;
+}
+
+/* маленькие кнопки */
+.btn--small {
+    border-radius: 12px !important;
+}
+
+/* hero buttons */
+.hero__actions .btn,
+.page-hero__actions .btn,
+.service-hero__actions .btn,
+.home-hero__actions .btn,
+.quote-flow__actions .btn,
+.service-cta__actions .btn,
+.prefooter-cta__actions .btn {
+    border-radius: var(--radius-soft) !important;
+}
+
+/* эти плашки на service hero: Provider categories / Quote comparison / Warranty questions */
+.service-hero__chip,
+.hero__chip,
+.page-hero__chip {
+    border-radius: var(--radius-soft) !important;
+    background: rgba(255, 255, 255, 0.11) !important;
+    border-color: rgba(255, 255, 255, 0.24) !important;
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* если где-то используются hero-service-link / hero-solar-flow */
+.hero-service-link,
+.hero-solar-flow__item {
+    border-radius: var(--radius-soft) !important;
+}
+
+/* dropdown / menu / footer плашки */
+.services-dropdown,
+.services-dropdown__link,
+.mobile-menu__contact,
+.cookie-banner__inner {
+    border-radius: var(--radius-soft) !important;
+}
+
+/* формы */
+.form-input,
+.form-select,
+.form-textarea,
+.form-message,
+.contact-form-card,
+.contact-option {
+    border-radius: var(--radius-soft) !important;
+}
+
+/* FAQ и notice-блоки */
+.service-overview__notice,
+.service-faq__notice,
+.services-faq__note,
+.contact-after-request__notice,
+.quote-flow__note {
+    border-radius: var(--radius-soft) !important;
+}
+
+/* карточки/фото — лёгкое скругление, не слишком круглое */
+.service-factor,
+.provider-factor,
+.home-gloss-strip__item,
+.services-process__icon,
+.service-overview__panel,
+.service-photo-split__content,
+.service-photo-split__photo {
+    border-radius: var(--radius-soft-lg) !important;
+}
+
+/* круглые иконки оставляем круглыми */
+.services-process__icon,
+.quote-flow__dot,
+.solar-dark-factor__icon,
+.home-orbit__center,
+.home-orbit__node {
+    border-radius: 999px !important;
+}
+
+/* чтобы картинки внутри карточек не вылезали за скругления */
+.photo-card,
+.service-photo-split__photo,
+.service-overview__panel,
+.service-photo-split__content {
+    overflow: hidden;
+}
+
+/* mobile — чуть меньше радиус, чтобы не выглядело громоздко */
+@media (max-width: 767px) {
+    :root {
+        --radius-soft: 12px;
+        --radius-soft-lg: 18px;
+    }
+
+    .service-hero__chip,
+    .hero__chip,
+    .page-hero__chip {
+        border-radius: 12px !important;
+    }
+}
+
+/* =========================================================
+   FIX — DO NOT ROUND PHOTO SERVICE CARDS
+========================================================= */
+
+.home-services__card.photo-card,
+.related-services__card.photo-card,
+.services-grid__card.photo-card,
+.services-page-swiper__card.photo-card {
+    border-radius: 0 !important;
+}
+
+.home-services__card.photo-card::before,
+.home-services__card.photo-card::after,
+.related-services__card.photo-card::before,
+.related-services__card.photo-card::after,
+.services-grid__card.photo-card::before,
+.services-grid__card.photo-card::after,
+.services-page-swiper__card.photo-card::before,
+.services-page-swiper__card.photo-card::after {
+    border-radius: 0 !important;
+}

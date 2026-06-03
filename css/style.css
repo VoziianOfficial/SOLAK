@@ -2513,3 +2513,188 @@ html {
         color: var(--color-yellow) !important;
     }
 }
+
+/* =========================================================
+   PAGE HERO CREATIVE UNEVEN BOTTOMS
+   Services / About / Contact
+========================================================= */
+
+.page-hero--shape {
+    position: relative;
+    min-height: 560px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.page-hero--shape::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 1;
+    height: 48%;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg,
+            transparent,
+            rgba(3, 42, 90, 0.58));
+}
+
+.page-hero--shape .container {
+    position: relative;
+    z-index: 4;
+}
+
+.page-hero--shape .page-hero__content {
+    padding-block: 86px 54px;
+}
+
+.page-hero-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 3;
+    height: 150px;
+    pointer-events: none;
+}
+
+.page-hero-shape svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.page-hero-shape path {
+    fill: var(--color-white);
+}
+
+/* SERVICES — more energetic cut */
+.page-hero--shape-services {
+    background:
+        radial-gradient(circle at 18% 20%, rgba(22, 184, 62, 0.2), transparent 27%),
+        radial-gradient(circle at 82% 22%, rgba(255, 210, 63, 0.18), transparent 26%),
+        linear-gradient(90deg, rgba(3, 42, 90, 0.9), rgba(3, 42, 90, 0.72)),
+        var(--hero-image, linear-gradient(135deg, var(--color-navy-deep), var(--color-navy)));
+    background-size: cover;
+    background-position: center;
+}
+
+.page-hero--shape-services .page-hero-shape path {
+    fill: var(--color-white);
+}
+
+/* ABOUT — softer wave */
+.page-hero--shape-about {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(255, 210, 63, 0.16), transparent 26%),
+        radial-gradient(circle at 86% 20%, rgba(22, 184, 62, 0.18), transparent 28%),
+        linear-gradient(90deg, rgba(3, 42, 90, 0.9), rgba(6, 59, 122, 0.68)),
+        var(--hero-image, linear-gradient(135deg, var(--color-navy-deep), var(--color-navy)));
+    background-size: cover;
+    background-position: center;
+}
+
+.page-hero--shape-about .page-hero-shape path {
+    fill: var(--color-white);
+}
+
+/* CONTACT — stronger dynamic bottom */
+.page-hero--shape-contact {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(22, 184, 62, 0.2), transparent 28%),
+        radial-gradient(circle at 78% 20%, rgba(255, 210, 63, 0.2), transparent 25%),
+        linear-gradient(90deg, rgba(3, 42, 90, 0.92), rgba(3, 42, 90, 0.7)),
+        var(--hero-image, linear-gradient(135deg, var(--color-navy-deep), var(--color-navy)));
+    background-size: cover;
+    background-position: center;
+}
+
+.page-hero--shape-contact .page-hero-shape path {
+    fill: var(--color-blue-soft);
+}
+
+/* Extra small glossy dots */
+
+.page-hero--shape .page-hero__content::before,
+.page-hero--shape .page-hero__content::after {
+    content: "";
+    position: absolute;
+    border-radius: var(--radius-round);
+    pointer-events: none;
+}
+
+.page-hero--shape .page-hero__content::before {
+    width: 11px;
+    height: 11px;
+    right: 10%;
+    top: 18%;
+    background: var(--color-yellow);
+    box-shadow: 0 0 0 8px rgba(255, 210, 63, 0.14);
+}
+
+.page-hero--shape .page-hero__content::after {
+    width: 9px;
+    height: 9px;
+    left: 9%;
+    bottom: 20%;
+    background: var(--color-green);
+    box-shadow: 0 0 0 8px rgba(22, 184, 62, 0.13);
+}
+
+/* TABLET */
+
+@media (max-width: 1023px) {
+    .page-hero--shape {
+        min-height: auto;
+        padding-bottom: 86px;
+    }
+
+    .page-hero--shape .page-hero__content {
+        max-width: 780px;
+        padding-block: 72px 46px;
+    }
+
+    .page-hero-shape {
+        height: 118px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .page-hero--shape {
+        padding-bottom: 72px;
+    }
+
+    .page-hero--shape .page-hero__content {
+        padding-block: 58px 36px;
+    }
+
+    .page-hero--shape .page-hero__title {
+        font-size: clamp(2.05rem, 10vw, 2.85rem);
+        line-height: 1.06;
+        text-wrap: balance;
+    }
+
+    .page-hero--shape .page-hero__text {
+        font-size: 0.96rem;
+        line-height: 1.55;
+    }
+
+    .page-hero--shape .page-hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .page-hero-shape {
+        height: 84px;
+    }
+
+    .page-hero--shape .page-hero__content::before,
+    .page-hero--shape .page-hero__content::after {
+        display: none;
+    }
+}

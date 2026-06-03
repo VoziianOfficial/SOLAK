@@ -237,6 +237,43 @@
         doc.head.appendChild(script);
     }
 
+    function initSolarControlSection() {
+        const sections = document.querySelectorAll('[data-solar-control]');
+
+        sections.forEach((section) => {
+            const range = section.querySelector('[data-solar-control-range]');
+            const valueText = section.querySelector('[data-solar-control-value]');
+
+            if (!range) return;
+
+            function updateSolarControl() {
+                const value = Number(range.value);
+
+                const sunX = 12 + value * 0.76;
+                const sunY = 74 - value * 0.58;
+                const sunScale = 0.7 + value * 0.006;
+                const sunOpacity = 0.42 + value * 0.006;
+                const brightness = 0.92 + value * 0.0024;
+
+                section.style.setProperty('--solar-control-value', value);
+                section.style.setProperty('--sun-x', `${sunX}%`);
+                section.style.setProperty('--sun-y', `${sunY}%`);
+                section.style.setProperty('--sun-scale', sunScale.toFixed(2));
+                section.style.setProperty('--sun-opacity', sunOpacity.toFixed(2));
+                section.style.setProperty('--sky-brightness', brightness.toFixed(2));
+
+                if (valueText) {
+                    valueText.textContent = `${value}%`;
+                }
+            }
+
+            range.addEventListener('input', updateSolarControl);
+            updateSolarControl();
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', initSolarControlSection);
+
     function initServicePage() {
         connectRelatedCarouselControls();
         applyRelatedCardImages();

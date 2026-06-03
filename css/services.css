@@ -1071,3 +1071,7 @@
 .page-hero--shape-services .page-hero__text {
     text-shadow: 0 8px 22px rgba(3, 42, 90, 0.5);
 }
+
+.page-hero--shape-services .services-sun-cycle {
+    opacity: 0.58;
+}

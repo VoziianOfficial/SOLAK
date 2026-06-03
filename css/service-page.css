@@ -1440,3 +1440,246 @@
         transform: rotate(360deg);
     }
 }
+
+/* =========================================================
+   REAL RUNNING MARQUEE AFTER SERVICE HERO
+========================================================= */
+
+.solar-loop-marquee {
+    position: relative;
+    z-index: 5;
+    padding-block: 18px;
+    background:
+        radial-gradient(circle at 12% 50%, rgba(255, 210, 63, 0.12), transparent 24%),
+        linear-gradient(135deg, #021D3F, var(--color-navy-deep));
+    overflow: hidden;
+}
+
+.solar-loop-marquee__shell {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    width: min(100% - 40px, var(--container));
+    margin-inline: auto;
+    min-height: 76px;
+    border-radius: 999px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(16px);
+    overflow: hidden;
+}
+
+.solar-loop-marquee__label {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 76px;
+    padding: 0 26px;
+    color: var(--color-white);
+    background:
+        radial-gradient(circle at 26% 32%, rgba(255, 210, 63, 0.28), transparent 34%),
+        linear-gradient(135deg, rgba(255, 210, 63, 0.16), rgba(22, 184, 62, 0.1));
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    white-space: nowrap;
+}
+
+.solar-loop-marquee__sun {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, var(--color-yellow) 0 42%, transparent 45%),
+        conic-gradient(transparent 0 7%,
+            var(--color-yellow) 7% 10%,
+            transparent 10% 17%,
+            var(--color-yellow) 17% 20%,
+            transparent 20% 27%,
+            var(--color-yellow) 27% 30%,
+            transparent 30% 37%,
+            var(--color-yellow) 37% 40%,
+            transparent 40% 47%,
+            var(--color-yellow) 47% 50%,
+            transparent 50% 57%,
+            var(--color-yellow) 57% 60%,
+            transparent 60% 67%,
+            var(--color-yellow) 67% 70%,
+            transparent 70% 77%,
+            var(--color-yellow) 77% 80%,
+            transparent 80% 87%,
+            var(--color-yellow) 87% 90%,
+            transparent 90% 100%);
+    box-shadow: 0 0 0 8px rgba(255, 210, 63, 0.1);
+    animation: solarLoopSunSpin 8s linear infinite;
+}
+
+.solar-loop-marquee__label strong {
+    font-size: 0.92rem;
+    font-weight: 950;
+    letter-spacing: 0.08em;
+}
+
+.solar-loop-marquee__viewport {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.solar-loop-marquee__viewport::before,
+.solar-loop-marquee__viewport::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 70px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.solar-loop-marquee__viewport::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(2, 29, 63, 0.95), transparent);
+}
+
+.solar-loop-marquee__viewport::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(2, 29, 63, 0.95), transparent);
+}
+
+.solar-loop-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: solarLoopMarqueeRun 26s linear infinite;
+}
+
+.solar-loop-marquee:hover .solar-loop-marquee__track {
+    animation-play-state: paused;
+}
+
+.solar-loop-marquee__group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-right: 18px;
+}
+
+.solar-loop-marquee__group span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-width: max-content;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.92rem;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.solar-loop-marquee__group span::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-yellow);
+    box-shadow: 0 0 0 7px rgba(255, 210, 63, 0.1);
+}
+
+.solar-loop-marquee__group span:nth-child(2n)::before {
+    background: var(--color-green);
+    box-shadow: 0 0 0 7px rgba(22, 184, 62, 0.1);
+}
+
+.solar-loop-marquee__group span::after {
+    content: "";
+    width: 44px;
+    height: 1px;
+    background:
+        linear-gradient(90deg,
+            rgba(255, 210, 63, 0.56),
+            rgba(22, 184, 62, 0.32),
+            transparent);
+}
+
+@keyframes solarLoopMarqueeRun {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes solarLoopSunSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 1023px) {
+    .solar-loop-marquee__shell {
+        width: min(100% - 32px, var(--container));
+        grid-template-columns: 1fr;
+        border-radius: 32px;
+    }
+
+    .solar-loop-marquee__label {
+        min-height: 56px;
+        justify-content: center;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .solar-loop-marquee__viewport {
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .solar-loop-marquee {
+        padding-block: 14px;
+    }
+
+    .solar-loop-marquee__shell {
+        width: min(100% - 28px, var(--container));
+        border-radius: 26px;
+    }
+
+    .solar-loop-marquee__group {
+        gap: 14px;
+        padding-right: 14px;
+    }
+
+    .solar-loop-marquee__group span {
+        font-size: 0.84rem;
+    }
+
+    .solar-loop-marquee__group span::after {
+        width: 30px;
+    }
+
+    .solar-loop-marquee__track {
+        animation-duration: 20s;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .solar-loop-marquee__track,
+    .solar-loop-marquee__sun {
+        animation: none !important;
+    }
+}

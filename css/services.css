@@ -1524,10 +1524,7 @@
 }
 
 
-/* =========================================================
-   SERVICES PROCESS — DARK COLOR OVERRIDE ONLY
-   Layout stays the same
-========================================================= */
+
 
 .services-process {
     color: var(--color-white);
@@ -1551,7 +1548,7 @@
     color: rgba(255, 255, 255, 0.76);
 }
 
-/* линия между шагами */
+
 .services-process__line::before {
     background:
         linear-gradient(90deg,
@@ -1563,7 +1560,6 @@
     box-shadow: 0 0 24px rgba(255, 210, 63, 0.18);
 }
 
-/* шаги без изменения структуры */
 .services-process__step {
     color: var(--color-white);
 }
@@ -1576,7 +1572,7 @@
     color: rgba(255, 255, 255, 0.68);
 }
 
-/* яркие круглые иконки */
+
 .services-process__icon {
     color: var(--color-navy-deep) !important;
     background:
@@ -1603,7 +1599,7 @@
     color: var(--color-navy-deep);
 }
 
-/* каждый второй круг — зелёный, чтобы было сочнее */
+
 .services-process__step:nth-child(2n) .services-process__icon {
     color: var(--color-white) !important;
     background:
@@ -1621,7 +1617,7 @@
     color: var(--color-white);
 }
 
-/* hover оставляем, но под тёмную секцию */
+
 .services-process__step:hover .services-process__icon {
     transform: translateY(-6px) scale(1.04);
     background:
@@ -1632,7 +1628,7 @@
         0 0 0 12px rgba(255, 210, 63, 0.08) !important;
 }
 
-/* планшеты и мобилки — только цвета, сетку не ломаем */
+
 @media (max-width: 1023px) {
     .services-process__step {
         border-top-color: rgba(255, 255, 255, 0.13) !important;
